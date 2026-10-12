@@ -234,14 +234,17 @@ COMM = [('Redressal of Public Grievance', 'Ms K V R S Madhuri (TGT) · Mr B Muty
         ('Protection of Children from Sexual Offence', 'Ms Vijayalaxmi Naidu (TGT) · Ms L Maruti Devi (PRT) · Ms K V Ranganayaki (PRT) · Mr U Rama Krishna (PRT)')]
 
 
-def school_info():
-    kv = [('Name & address', 'DELHI PUBLIC SCHOOL Visakhapatnam Steel Plant, Sector-VIII, Ukkunagaram, Visakhapatnam Steel Plant, Visakhapatnam, Andhra Pradesh – 530032'),
+INFO_KV = [('Name & address', 'DELHI PUBLIC SCHOOL Visakhapatnam Steel Plant, Sector-VIII, Ukkunagaram, Visakhapatnam Steel Plant, Visakhapatnam, Andhra Pradesh – 530032'),
           ('E-mail', EMAIL), ('Phone / Fax', '0891 2510686, 0891 2886880 · Fax 0891-2510686'), ('Year of establishment', '1991'),
           ('NOC from State / UT', 'Secretary to Govt A.P · Ltr. No. 1836/EE2/92-Edn · dated 21-09-1992'), ('Recognition', 'Recognised by the Central Board of Secondary Education'),
           ('Affiliation', 'Provisional · Affiliation No. 130110 · with the Board since 1992 · extension of affiliation up to 31.03.2023'),
           ('Trust / Society', 'DPS Society, registered under the Societies Registration Act 1860. Registration is on a permanent basis.'),
           ('Manager / Principal', 'Shri Samir Kumar Pandey, Principal · dpsvisakhapatnam@gmail.com · +91 94931 93753'),
           ('Grievance / Redressal Officer', 'Smt. Kavita Pandey, Delhi Public School, Visakhapatnam Steel Plant · +91 94251 80099 · kavitapandeydps@gmail.com')]
+
+
+def school_info():
+    kv = INFO_KV
     t1 = ''.join(f'<tr><td><b>{esc(a)}</b></td><td>{esc(b)}</td></tr>' for a, b in kv)
     t2 = ''.join(f'<tr><td>{i}</td><td>{esc(n)}</td><td>{esc(r)}</td><td>{esc(a)}</td><td>{esc(t)}</td></tr>' for i, (n, r, a, t) in enumerate(SMC, 1))
     t3 = ''.join(f'<tr><td>{i}</td><td>{esc(n)}</td><td>{esc(m)}</td></tr>' for i, (n, m) in enumerate(COMM, 1))
@@ -262,11 +265,11 @@ def build_disclosure():
     body = hero_page('Mandatory Public Disclosure', 'As per CBSE directive — Appendix IX. General information, documents, results, staff and infrastructure.', ['<a href="about.html">About</a>']) + subnav([
         ('mpd-a', 'General'), ('mpd-b', 'Documents'), ('mpd-c', 'Results'), ('mpd-d', 'Staff'), ('mpd-e', 'Infrastructure'), ('school-information', 'School information')]) + f'''
 <section class="section" id="mpd"><div class="wrap">
-  <div class="prose reveal" style="max-width:none">{mpd}</div>
+  <div class="prose" id="mpdDyn" style="max-width:none">{mpd}</div>
 </div></section>
 <section class="section alt" id="school-information"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">About DPS VSP</p><h2>School information &amp; committees</h2></div>
-  <div class="prose reveal" style="max-width:none">{school_info()}</div>
+  <div class="prose" id="schoolInfoDyn" style="max-width:none">{school_info()}</div>
 </div></section>'''
     return page('disclosure.html', 'Mandatory Public Disclosure', 'CBSE mandatory public disclosure for Delhi Public School Visakhapatnam Steel Plant: affiliation, certificates, results, staff and infrastructure.', 'More', body)
 

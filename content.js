@@ -104,6 +104,36 @@
     }
   });
 
+  /* mandatory public disclosure */
+  const table = (heads, rows, numCols = []) => `<div class="tbl-wrap"><table class="t"><thead><tr>${heads.map((h, i) => `<th${numCols.includes(i) ? ' class="num"' : ''}>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
+  const tr = cells => `<tr>${cells.map(c => `<td>${c}</td>`).join('')}</tr>`;
+  const kvRows = (a, withNo) => (a || []).map((r, i) => tr((withNo ? [i + 1 + '.'] : []).concat([`<b>${esc(r.item)}</b>`, esc(r.detail)]))).join('');
+  const docCell = r => r.file ? `<a href="${encodeURI(rel(r.file))}" target="_blank" rel="noopener">Click here to view</a>` : esc(r.note || 'N.A.');
+  const docRows = a => (a || []).map((r, i) => tr([i + 1 + '.', esc(r.item), docCell(r)])).join('');
+  job('#mpdDyn', ['disclosure'], d => {
+    if (!d) return;
+    $('#mpdDyn').innerHTML = `<h3>${esc(d.title || 'Appendix-IX')}</h3><p>${esc(d.subtitle || '')}</p>` +
+      `<h3 id="mpd-a">A. General Information</h3>${table(['Sl. No.', 'Information', 'Details'], kvRows(d.general, true))}` +
+      `<h3 id="mpd-b">B. Documents and Information</h3>${table(['Sl. No.', 'Documents / Information', 'Upload Documents'], docRows(d.documents))}` +
+      `<h3 id="mpd-c">C. Result and Academics</h3>${table(['Sl. No.', 'Documents / Information', 'Upload Documents'], docRows(d.academics_docs))}` +
+      `<h4>Result Class: X</h4>${table(['Sl. No.', 'Year', 'No. of Registered Students', 'No. of Students Passed', 'Pass Percentage', 'Class Average', 'Total No. of Distinctions', 'Distinction Ratio', 'Remarks'], (d.results_x || []).map((r, i) => tr([i + 1 + '.', r.year, r.registered, r.passed, r.percent, r.average, r.distinctions, r.ratio, r.remarks].map(esc))).join(''))}` +
+      `<h4>Result Class: XII</h4>${table(['Sl. No.', 'Year', 'No. of Registered Students', 'No. of Students Passed', 'Pass Percentage', 'Remarks'], (d.results_xii || []).map((r, i) => tr([i + 1 + '.', r.year, r.registered, r.passed, r.percent, r.remarks].map(esc))).join(''))}` +
+      `<h3 id="mpd-d">D. Staff (Teaching)</h3>${table(['Sl. No.', 'Information', 'Details'], kvRows(d.staff, true))}` +
+      `<h3 id="mpd-e">E. School Infrastructure</h3>${table(['Sl. No.', 'Information', 'Details'], kvRows(d.infrastructure, true))}`;
+    if ($('#schoolInfoDyn')) $('#schoolInfoDyn').innerHTML = `<h3>School information</h3>${table(['Item', 'Details'], kvRows(d.school_info, false))}` +
+      `<h3>Members of the School Managing Committee</h3>${table(['Sl.', 'Name', 'Post held', 'Address', 'Tenure'], (d.smc || []).map((r, i) => tr([i + 1, r.name, r.post, r.address, r.tenure].map(esc))).join(''))}` +
+      `<h3>Committees</h3><p>${esc(d.committees_note || '')}</p>${table(['Sl.', 'Committee', 'Members'], (d.committees || []).map((r, i) => tr([i + 1, r.committee, r.members].map(esc))).join(''))}` +
+      `<h3>Members of PTA</h3>${table(['Class', 'Member'], (d.pta || []).map(r => tr([r.class, r.name].map(esc))).join(''))}` +
+      `<p class="note">${d.pta_file ? `Full list with contact details: <a href="${encodeURI(rel(d.pta_file))}" target="_blank" rel="noopener">PTA members (PDF)</a>. ` : ''}${d.affiliation_file ? `Affiliation letter: <a href="${encodeURI(rel(d.affiliation_file))}" target="_blank" rel="noopener">PDF</a>.` : ''}</p>`;
+  });
+
+  /* uniform */
+  job('#uniformDyn', ['uniform'], u => {
+    if (!u || !(u.sets || []).length) return;
+    $('#uniformDyn').innerHTML = `${u.intro ? `<p>${esc(u.intro)}</p>` : ''}<div class="grid g2">${u.sets.map(st => `<div class="card"><h3>${esc(st.heading)}</h3>${(st.groups || []).map(g => `<h4>${esc(g.title)}</h4><ul>${(g.items || []).map(i => `<li>${esc(i)}</li>`).join('')}</ul>`).join('')}</div>`).join('')}</div>` +
+      ((u.notes || []).length ? `<div class="callout" style="margin-top:24px"><b>Please note</b><ul>${u.notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul></div>` : '');
+  });
+
   /* gallery + albums */
   job('#gallery', ['gallery'], g => {
     const el = $('#gallery'); let it = (g && g.items) || []; if (!it.length) return;

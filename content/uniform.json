@@ -1,0 +1,110 @@
+{
+  "intro": "All students from class I upwards must wear the following school uniform at school, during examinations and on organized tours and even on days when an extra class or any activity is conducted by the school.",
+  "sets": [
+    {
+      "heading": "Boys · Summer",
+      "groups": [
+        {
+          "title": "Balvatika - II to Class II",
+          "items": [
+            "Pink half sleeve shirt with pointed small collars and school emblem.",
+            "Blue half pant of denim cloth and bottle green school belt.",
+            "Pink socks with two green stripes on the top, 3\" below the knees.",
+            "Black all-purpose school shoes with medium toes and Velcro."
+          ]
+        },
+        {
+          "title": "Class III to VII",
+          "items": [
+            "Half sleeve white shirt with pointed small collars and school emblem.",
+            "White shorts not more than 2½” above the knees.",
+            "White socks with two green stripes on the top 3\" below the knees.",
+            "Black all-purpose school shoes with medium toes and laces.",
+            "Bottle green school tie and belt.",
+            "House T-Shirts and black track lower with white piping and school emblem on Thursdays."
+          ]
+        },
+        {
+          "title": "Class VIII to XII",
+          "items": [
+            "White trousers with minimum 18” flares.",
+            "Rest same as class III to VII."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Boys · Winter",
+      "groups": [
+        {
+          "title": "Balvatika - II to Class II",
+          "items": [
+            "“V” necked pink pullover and pink cap.",
+            "Rest same as summer uniform."
+          ]
+        },
+        {
+          "title": "Class III to XII",
+          "items": [
+            "Full sleeve white shirt with pointed small collars and school emblem.",
+            "“V” necked pullover of bottle green colour (sleeves optional) / Single breasted bottle green colour blazer with school emblem affixed on the chest pocket.",
+            "Rest same as summer uniform."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Girls · Summer",
+      "groups": [
+        {
+          "title": "Balvatika - II to Class II",
+          "items": [
+            "Pink half sleeve shirt with pointed small collars and school emblem.",
+            "Blue tunic of denim cloth and bottle green school belt.",
+            "Pink nylon socks with two green stripes on the top, 3\" below the knees.",
+            "Black all-purpose school shoes with medium toes and Velcro.",
+            "Pink ribbon, hairband and clips."
+          ]
+        },
+        {
+          "title": "Class III to XII",
+          "items": [
+            "White half sleeve blouse with pointed small collars and school emblem.",
+            "White box pleated skirt not more than 1” above the knees and 1” below the knees. From class V onwards divided skirts to be worn.",
+            "White nylon socks with two green stripes on the top 3\" below the knees.",
+            "Black all-purpose school shoes with medium toes and laces.",
+            "Bottle green school tie and belt.",
+            "Bottle green ribbon, hairband and clips.",
+            "House T-Shirts and black track lower with white piping and school emblem on Thursdays."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Girls · Winter",
+      "groups": [
+        {
+          "title": "Balvatika - II to Class II",
+          "items": [
+            "“V” necked pink pullover and pink cap / scarf.",
+            "Rest same as summer uniform."
+          ]
+        },
+        {
+          "title": "Class III to XII",
+          "items": [
+            "Full sleeve white blouse / shirt with pointed small collars and school emblem.",
+            "“V” necked pullover of bottle green colour (sleeves optional) / Single breasted bottle green colour blazer with school emblem affixed on the chest pocket.",
+            "Rest same as summer uniform."
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Wearing tie is compulsory for all students from Class III onwards.",
+    "Fancy sport shoes, fancy hair clips or jewellery is not allowed.",
+    "Turbans or Daster if worn should be of pink (up to class II) or bottle green colour (for other classes) for Sikh students.",
+    "Students from Balvatika to class II can wear full pants of the blue denim colour in winters."
+  ]
+}

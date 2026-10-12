@@ -255,7 +255,7 @@ def build_admissions():
 
 <section class="section" id="uniform"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">What to wear</p><h2>School uniform</h2></div>
-  <div class="prose reveal">{uni}</div>
+  <div class="prose" id="uniformDyn">{uni}</div>
 </div></section>
 
 <section class="section alt" id="forms"><div class="wrap">

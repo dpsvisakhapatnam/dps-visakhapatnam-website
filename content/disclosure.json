@@ -1,0 +1,438 @@
+{
+  "title": "Appendix-IX",
+  "subtitle": "Mandatory Public Disclosure as per CBSE directive",
+  "general": [
+    {
+      "item": "Name of the School",
+      "detail": "Delhi Public School Visakhapatnam Steel Plant"
+    },
+    {
+      "item": "Affiliation No. (if applicable)",
+      "detail": "130110"
+    },
+    {
+      "item": "School Code (if applicable)",
+      "detail": "57034"
+    },
+    {
+      "item": "Complete address with pin code",
+      "detail": "Sector-VIII, Ukkunagaram, Visakhapatnam Steel Plant, Visakhapatnam, Andhra Pradesh - 530032"
+    },
+    {
+      "item": "Principal Name & Qualification",
+      "detail": "Shri Samir Kumar Pandey, M.Phil, B.Ed"
+    },
+    {
+      "item": "School Email ID",
+      "detail": "dpsvisakhapatnam@gmail.com"
+    },
+    {
+      "item": "Contact Details (Landline / Mobile)",
+      "detail": "0891 2510686, 0891 2886880"
+    }
+  ],
+  "documents": [
+    {
+      "item": "Copies of affiliation / upgradation letter and recent extension of affiliation, if any",
+      "file": "docs/affiliation-certificate.pdf"
+    },
+    {
+      "item": "Copies of societies / trust / company registration / renewal certificate, as applicable",
+      "file": "docs/sesu-rc.pdf"
+    },
+    {
+      "item": "Copy of No Objection Certificate (NOC) issued, if applicable, by the State Govt. / UT",
+      "file": "docs/noc-scaned-copy.pdf"
+    },
+    {
+      "item": "Copies of Recognition Certificate under RTE Act, 2009, and its renewal if applicable",
+      "note": "N.A."
+    },
+    {
+      "item": "Copy of Valid Building Safety Certificate as per the National Building Code",
+      "file": "docs/building-safety.pdf"
+    },
+    {
+      "item": "Copy of Valid Fire Safety Certificate issued by the Competent Authority",
+      "file": "docs/fire-safety1.pdf"
+    },
+    {
+      "item": "Copy of the DEO Certificate Submitted by the School for Affiliation / Upgradation / Extension of Affiliation or Self Certification by School",
+      "file": "docs/school-affidivit.pdf"
+    },
+    {
+      "item": "Copies of valid Water, Health and Sanitation Certificates",
+      "file": "docs/water-health-and-sanitation-cert.pdf"
+    }
+  ],
+  "academics_docs": [
+    {
+      "item": "Fee Structure of the School",
+      "file": "docs/fee-structure-2026-27.jpg"
+    },
+    {
+      "item": "Annual School Calendar",
+      "file": "docs/sc-2025-26.jpg"
+    },
+    {
+      "item": "List of the School Board of Management",
+      "file": "docs/lmc-2025-26.pdf"
+    },
+    {
+      "item": "List of Parents Teachers Association (PTA) Members",
+      "file": "docs/pta-members-2026-27.pdf"
+    },
+    {
+      "item": "Last three-year result of the board examination as per applicability",
+      "note": "Listed below"
+    }
+  ],
+  "results_x": [
+    {
+      "year": "2020-21",
+      "registered": "169",
+      "passed": "169",
+      "percent": "100%",
+      "average": "83.0%",
+      "distinctions": "651",
+      "ratio": "3.9",
+      "remarks": "--"
+    },
+    {
+      "year": "2021-22",
+      "registered": "151",
+      "passed": "151",
+      "percent": "100%",
+      "average": "85.1%",
+      "distinctions": "626",
+      "ratio": "4.1",
+      "remarks": "--"
+    },
+    {
+      "year": "2022-23",
+      "registered": "144",
+      "passed": "144",
+      "percent": "100%",
+      "average": "78.3%",
+      "distinctions": "470",
+      "ratio": "3.3",
+      "remarks": "--"
+    },
+    {
+      "year": "2023-24",
+      "registered": "148",
+      "passed": "148",
+      "percent": "100%",
+      "average": "83.7%",
+      "distinctions": "534",
+      "ratio": "3.6",
+      "remarks": "--"
+    },
+    {
+      "year": "2024-25",
+      "registered": "167",
+      "passed": "167",
+      "percent": "100%",
+      "average": "85.2%",
+      "distinctions": "626",
+      "ratio": "3.7",
+      "remarks": "--"
+    }
+  ],
+  "results_xii": [
+    {
+      "year": "2020-21",
+      "registered": "13",
+      "passed": "13",
+      "percent": "100%",
+      "remarks": "----"
+    },
+    {
+      "year": "2021-22",
+      "registered": "18",
+      "passed": "18",
+      "percent": "100%",
+      "remarks": "----"
+    },
+    {
+      "year": "2022-23",
+      "registered": "20",
+      "passed": "20",
+      "percent": "100%",
+      "remarks": "----"
+    },
+    {
+      "year": "2023-24",
+      "registered": "19",
+      "passed": "19",
+      "percent": "100%",
+      "remarks": "----"
+    },
+    {
+      "year": "2024-25",
+      "registered": "20",
+      "passed": "20",
+      "percent": "100%",
+      "remarks": "----"
+    }
+  ],
+  "staff": [
+    {
+      "item": "Principal",
+      "detail": "Shri Samir Kumar Pandey"
+    },
+    {
+      "item": "Total No. of Teachers",
+      "detail": "59"
+    },
+    {
+      "item": "   * PGT",
+      "detail": "1"
+    },
+    {
+      "item": "   * TGT",
+      "detail": "7"
+    },
+    {
+      "item": "   * PRT",
+      "detail": "30"
+    },
+    {
+      "item": "Teachers Section Ratio",
+      "detail": "1.4"
+    },
+    {
+      "item": "Details of Special Educator",
+      "detail": "Smt P Nirmala"
+    },
+    {
+      "item": "Details of Counsellor and Wellness Teacher",
+      "detail": "Smt K V Ranganayaki"
+    }
+  ],
+  "infrastructure": [
+    {
+      "item": "Total Campus Area of the School (in square mtrs)",
+      "detail": "52609 Sq.Mtrs"
+    },
+    {
+      "item": "No. and size of the Class Rooms (in square mtrs)",
+      "detail": "No.-63, Area-107.02 Sq.Mtrs"
+    },
+    {
+      "item": "No. and size of the Laboratories including the Computer Labs (in square mtrs)",
+      "detail": "No.-5, Area-98.11 Sq.Mtrs"
+    },
+    {
+      "item": "Internet Facility (Yes / No)",
+      "detail": "Yes"
+    },
+    {
+      "item": "No. of Girls Toilets",
+      "detail": "5"
+    },
+    {
+      "item": "No. of Boys Toilets",
+      "detail": "7"
+    },
+    {
+      "item": "Link of YouTube video of the inspection of school covering the infrastructure of the school",
+      "detail": "N.A."
+    }
+  ],
+  "school_info": [
+    {
+      "item": "Name & address",
+      "detail": "DELHI PUBLIC SCHOOL Visakhapatnam Steel Plant, Sector-VIII, Ukkunagaram, Visakhapatnam Steel Plant, Visakhapatnam, Andhra Pradesh – 530032"
+    },
+    {
+      "item": "E-mail",
+      "detail": "dpsvisakhapatnam@gmail.com"
+    },
+    {
+      "item": "Phone / Fax",
+      "detail": "0891 2510686, 0891 2886880 · Fax 0891-2510686"
+    },
+    {
+      "item": "Year of establishment",
+      "detail": "1991"
+    },
+    {
+      "item": "NOC from State / UT",
+      "detail": "Secretary to Govt A.P · Ltr. No. 1836/EE2/92-Edn · dated 21-09-1992"
+    },
+    {
+      "item": "Recognition",
+      "detail": "Recognised by the Central Board of Secondary Education"
+    },
+    {
+      "item": "Affiliation",
+      "detail": "Provisional · Affiliation No. 130110 · with the Board since 1992 · extension of affiliation up to 31.03.2023"
+    },
+    {
+      "item": "Trust / Society",
+      "detail": "DPS Society, registered under the Societies Registration Act 1860. Registration is on a permanent basis."
+    },
+    {
+      "item": "Manager / Principal",
+      "detail": "Shri Samir Kumar Pandey, Principal · dpsvisakhapatnam@gmail.com · +91 94931 93753"
+    },
+    {
+      "item": "Grievance / Redressal Officer",
+      "detail": "Smt. Kavita Pandey, Delhi Public School, Visakhapatnam Steel Plant · +91 94251 80099 · kavitapandeydps@gmail.com"
+    }
+  ],
+  "smc": [
+    {
+      "name": "Shri Rahul Singh",
+      "post": "Chairperson",
+      "address": "Colaba, Mumbai – 400005",
+      "tenure": "Three years"
+    },
+    {
+      "name": "Dr (Mrs) Malini Vijay Shankar",
+      "post": "Vice Chairperson",
+      "address": "Uthadi, Chennai – 600119",
+      "tenure": "Three years"
+    },
+    {
+      "name": "Shri Shantanu Consul",
+      "post": "Member",
+      "address": "BTM 2nd Stage, Bangalore – 560076",
+      "tenure": "Three years"
+    },
+    {
+      "name": "Shri Rakesh Kacker",
+      "post": "Member",
+      "address": "Defence Colony, New Delhi – 110024",
+      "tenure": "Three years"
+    },
+    {
+      "name": "Shri Pravin Srivastava",
+      "post": "Member",
+      "address": "Eldeco Utopia Expressway, Noida – 201301, UP",
+      "tenure": "Three years"
+    },
+    {
+      "name": "Mrs N Bhanu",
+      "post": "Pro Vice Chairperson",
+      "address": "GM (HR), RINL VSP",
+      "tenure": "Until further posting"
+    },
+    {
+      "name": "Shri J Rahul",
+      "post": "Member",
+      "address": "DGM (TA) I/c, RINL VSP",
+      "tenure": "Until further posting"
+    },
+    {
+      "name": "Shri Ch Leela Srinivas",
+      "post": "Member",
+      "address": "DGM (F&A), RINL VSP",
+      "tenure": "Until further posting"
+    },
+    {
+      "name": "Shri Padma Ranjan Roy",
+      "post": "Member",
+      "address": "Sr Manager (TA)",
+      "tenure": "Until further posting"
+    },
+    {
+      "name": "Shri Samir Kumar Pandey",
+      "post": "Secretary",
+      "address": "Principal, DPS Visakhapatnam Steel Plant, Sector-VIII, Ukkunagaram, Visakhapatnam – 530032",
+      "tenure": "Until further posting"
+    }
+  ],
+  "committees_note": "In accordance with CBSE Circular No. 19/2017 dated 12th September 2017, the following committees have been constituted:",
+  "committees": [
+    {
+      "committee": "Redressal of Public Grievance",
+      "members": "Ms K V R S Madhuri (TGT) · Mr B Mutyala Rao (Office Superintendent) · Mr T Srinivas Rao (LDC)"
+    },
+    {
+      "committee": "Redressal of Staff Grievances",
+      "members": "Ms T Nagini (PGT) · Mr N V S V N Murthy (TGT) · Ms K V R S Madhuri (TGT)"
+    },
+    {
+      "committee": "Redressal of Parents’ Grievances",
+      "members": "Ms A Sreedevi (TGT) · Ms P Sarada (PRT) · Ms N D Sasiprabha (PRT)"
+    },
+    {
+      "committee": "Redressal of Students’ Grievances",
+      "members": "Ms Kavita Pandey (PGT) · Mr P Naagendra (PRT) · Ms Sridevi Vasantha Rao (PRT)"
+    },
+    {
+      "committee": "Internal Complaints Committee",
+      "members": "Ms G S Rajyalakshmi (TGT) · Ms J X Juliana Nirmala (TGT) · Ms V Sreedevi (PRT)"
+    },
+    {
+      "committee": "Sexual Harassment Committee",
+      "members": "Ms C B Jeevakala (TGT) · Ms Sibani Patnaik (TGT) · Mr N V S V N Murthy (TGT) · Ms Sushree Samantaray (PRT) · Mr Navin Kumar Karan (PRT)"
+    },
+    {
+      "committee": "Protection of Children from Sexual Offence",
+      "members": "Ms Vijayalaxmi Naidu (TGT) · Ms L Maruti Devi (PRT) · Ms K V Ranganayaki (PRT) · Mr U Rama Krishna (PRT)"
+    }
+  ],
+  "pta": [
+    {
+      "class": "Balvatika – II",
+      "name": "Gutta Sireesha"
+    },
+    {
+      "class": "Balvatika – III",
+      "name": "Himanshu Raj"
+    },
+    {
+      "class": "I",
+      "name": "Abhishek Kumar"
+    },
+    {
+      "class": "II",
+      "name": "Prabhat Chandra"
+    },
+    {
+      "class": "III",
+      "name": "Krishnadeo Yadav"
+    },
+    {
+      "class": "IV",
+      "name": "Chandan Sarkar"
+    },
+    {
+      "class": "V",
+      "name": "Biswabandhu Mohapatra"
+    },
+    {
+      "class": "VI",
+      "name": "P Arjun Kumar"
+    },
+    {
+      "class": "VII",
+      "name": "Divecha Prabhakar M"
+    },
+    {
+      "class": "VIII",
+      "name": "Saraswati Kallo"
+    },
+    {
+      "class": "IX",
+      "name": "Satish Kumar Singh"
+    },
+    {
+      "class": "X",
+      "name": "Ajay Vikram S"
+    },
+    {
+      "class": "XI",
+      "name": "Muralidhar Banu"
+    },
+    {
+      "class": "XII",
+      "name": "G Usha"
+    }
+  ],
+  "pta_file": "docs/pta-members-2026-27.pdf",
+  "affiliation_file": "docs/aff-doc.pdf"
+}

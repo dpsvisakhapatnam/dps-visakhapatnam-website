@@ -287,3 +287,144 @@ collections:
                   - { label: "Amount, second column", name: nvsp, widget: string }
           - { label: "Note under the table", name: note, widget: text, required: false }
           - { label: "Official scan (image) of the signed fee structure", name: scan, widget: image, allow_multiple: false, required: false, hint: "Upload a clear photo or scan. It is shown beside the table and can be downloaded." }
+
+  - name: disclosure_collection
+    label: "📋 Mandatory public disclosure"
+    description: "The CBSE disclosure page: general information, documents, board results, staff, infrastructure, committees and PTA."
+    files:
+      - name: disclosure
+        label: "Mandatory public disclosure"
+        file: content/disclosure.json
+        format: json
+        fields:
+          - { label: "Page heading", name: title, widget: string, default: "Appendix-IX" }
+          - { label: "Line under the heading", name: subtitle, widget: string, required: false }
+          - label: "A. General information"
+            name: general
+            widget: list
+            label_singular: "row"
+            summary: "{{fields.item}}"
+            fields: &kv_fields
+              - { label: "Item", name: item, widget: string }
+              - { label: "Details", name: detail, widget: text }
+          - label: "B. Documents and certificates"
+            name: documents
+            widget: list
+            label_singular: "document"
+            summary: "{{fields.item}}"
+            hint: "Upload the PDF to show a “Click here to view” link. If there is no document, leave the file empty and type N.A. in the note."
+            fields: &doc_fields
+              - { label: "Document name", name: item, widget: text }
+              - { label: "File (PDF or image)", name: file, widget: file, required: false }
+              - { label: "Note (shown if there is no file)", name: note, widget: string, required: false }
+          - label: "C. Result and academics: documents"
+            name: academics_docs
+            widget: list
+            label_singular: "document"
+            summary: "{{fields.item}}"
+            fields: *doc_fields
+          - label: "Board results: Class X"
+            name: results_x
+            widget: list
+            label_singular: "year"
+            summary: "{{fields.year}}"
+            add_to_top: false
+            hint: "Add a new row each year after the board results."
+            fields:
+              - { label: "Year", name: year, widget: string, hint: "e.g. 2025-26" }
+              - { label: "No. of registered students", name: registered, widget: string }
+              - { label: "No. of students passed", name: passed, widget: string }
+              - { label: "Pass percentage", name: percent, widget: string, hint: "e.g. 100%" }
+              - { label: "Class average", name: average, widget: string, hint: "e.g. 85.2%" }
+              - { label: "Total no. of distinctions", name: distinctions, widget: string }
+              - { label: "Distinction ratio", name: ratio, widget: string }
+              - { label: "Remarks", name: remarks, widget: string, required: false }
+          - label: "Board results: Class XII"
+            name: results_xii
+            widget: list
+            label_singular: "year"
+            summary: "{{fields.year}}"
+            fields:
+              - { label: "Year", name: year, widget: string }
+              - { label: "No. of registered students", name: registered, widget: string }
+              - { label: "No. of students passed", name: passed, widget: string }
+              - { label: "Pass percentage", name: percent, widget: string }
+              - { label: "Remarks", name: remarks, widget: string, required: false }
+          - label: "D. Staff (teaching)"
+            name: staff
+            widget: list
+            label_singular: "row"
+            summary: "{{fields.item}}"
+            fields: *kv_fields
+          - label: "E. School infrastructure"
+            name: infrastructure
+            widget: list
+            label_singular: "row"
+            summary: "{{fields.item}}"
+            fields: *kv_fields
+          - label: "School information"
+            name: school_info
+            widget: list
+            label_singular: "row"
+            summary: "{{fields.item}}"
+            fields: *kv_fields
+          - label: "School Managing Committee members"
+            name: smc
+            widget: list
+            label_singular: "member"
+            summary: "{{fields.name}} · {{fields.post}}"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Post held", name: post, widget: string }
+              - { label: "Address", name: address, widget: text }
+              - { label: "Tenure", name: tenure, widget: string }
+          - { label: "Sentence above the committees list", name: committees_note, widget: text, required: false }
+          - label: "Committees"
+            name: committees
+            widget: list
+            label_singular: "committee"
+            summary: "{{fields.committee}}"
+            fields:
+              - { label: "Committee", name: committee, widget: string }
+              - { label: "Members", name: members, widget: text }
+          - label: "PTA members (class and name only)"
+            name: pta
+            widget: list
+            label_singular: "member"
+            summary: "{{fields.class}} · {{fields.name}}"
+            fields:
+              - { label: "Class", name: class, widget: string }
+              - { label: "Member name", name: name, widget: string }
+          - { label: "Full PTA list (PDF with contact details)", name: pta_file, widget: file, required: false }
+          - { label: "Affiliation letter (PDF)", name: affiliation_file, widget: file, required: false }
+
+  - name: uniform_collection
+    label: "👕 School uniform"
+    description: "The uniform rules shown on the Admissions page."
+    files:
+      - name: uniform
+        label: "School uniform"
+        file: content/uniform.json
+        format: json
+        fields:
+          - { label: "Introduction", name: intro, widget: text }
+          - label: "Uniform sets (Boys / Girls, Summer / Winter)"
+            name: sets
+            widget: list
+            label_singular: "set"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "Heading", name: heading, widget: string, hint: "e.g. Boys · Summer" }
+              - label: "Class groups"
+                name: groups
+                widget: list
+                label_singular: "class group"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Classes", name: title, widget: string, hint: "e.g. Class III to VII" }
+                  - { label: "Items of the uniform", name: items, widget: list, label_singular: "item", field: { label: "Item", name: item, widget: string } }
+          - label: "Notes"
+            name: notes
+            widget: list
+            label_singular: "note"
+            field: { label: "Note", name: note, widget: string }
