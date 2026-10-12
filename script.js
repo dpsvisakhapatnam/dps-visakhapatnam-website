@@ -113,11 +113,11 @@
   }
 
   /* ---------- tabs ---------- */
-  $$('[data-tabs]').forEach(tabs => {
+  (window.DPS_READY || Promise.resolve()).then(() => $$('[data-tabs]').forEach(tabs => {
     const tb = $$('[role=tab]', tabs), pn = $$('[role=tabpanel]', tabs);
     const pick = (i, focus) => { tb.forEach((t, k) => { t.setAttribute('aria-selected', k === i); t.tabIndex = k === i ? 0 : -1; }); pn.forEach((p, k) => p.hidden = k !== i); if (focus) tb[i].focus(); };
     tb.forEach((t, i) => { t.addEventListener('click', () => pick(i)); t.addEventListener('keydown', e => { if (e.key === 'ArrowRight') pick((i + 1) % tb.length, 1); if (e.key === 'ArrowLeft') pick((i - 1 + tb.length) % tb.length, 1); }); });
-  });
+  }));
 
   /* ---------- reveal & bars ---------- */
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
@@ -179,6 +179,7 @@
   }
 
   /* ---------- important days: highlight the next one ---------- */
+  (window.DPS_READY || Promise.resolve()).then(() => {
   const dayLists = $$('.days[id^=days]');
   if (dayLists.length) {
     const now = new Date(); now.setHours(0, 0, 0, 0);
@@ -202,6 +203,7 @@
       }
     });
   }
+  });
 
   /* ---------- subnav highlight ---------- */
   const sn = $$('.subnav a');

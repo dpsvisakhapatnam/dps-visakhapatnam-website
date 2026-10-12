@@ -1,0 +1,123 @@
+{
+  "infra_md": "### Area of School Campus\n\n|  |  |\n| --- | --- |\n| In Acres | 13 |\n| in sq.mtrs | 52609.1332 |\n| Built up area(sq.mtrs) | 6000 |\n| Area of Playground in sq.mtrs | 32374.852 |\n| Other facilities |  |\n| i)swimming pool | NO |\n| ii)Indoor Games | YES |\n| iii)Dance Rooms | YES |\n| iv)Gymnasium | NO |\n| v)Music Room | YES |\n| vi)Hostels | NO |\n| vii)Health and Medical Check up | Done by VSGH |\n| Transport facility | Own / Outsourcing Buses |\n\n### Laboratories\n\n| Lab and Rooms Details | Number | Length(in ft) | Breadth(in ft) |\n| --- | --- | --- | --- |\n| Class Rooms | 44 | 24 | 22 |\n| Composite Science Lab | 0 | 0 | 0 |\n| Physics Lab | 1 | 22 | 48 |\n| Chemistry Lab | 1 | 22 | 48 |\n| Biology Lab | 1 | 22 | 48 |\n| Maths Lab | 1 | 22 | 45 |\n| Computer Science Lab | 1 | 27 | 45 |\n| Home Science Lab | 0 | 0 | 0 |\n| Library | 1 | 48 | 32 |\n| Other Rooms | 5 | 22 | 45 |\n\n### Library\n\n|  |  |\n| --- | --- |\n| **Size of Library in sq.feet** | 48'X32' |\n| **No of Periodicals** | 04 |\n| **No of Dailies** | 05 |\n| **No of Reference books class-wise** | 6080 |\n| **No of Magazine** | 12 |\n| **Others** | -- |\n\n### Playground\n\nArea of Playground in sq.mtrs - 32374.852",
+  "assembly_md": "Morning Assembly is conducted by one particular class for the whole week. It is held on Mondays, Wednesdays and Fridays. On Mondays and Wednesdays it is held in English and on Fridays in Telugu / Hindi / Sanskrit.\n\nThe Morning Assembly begins with ‘Vande Mataram’ and is followed by prayers, then mass PT, Patriotic Song, Scripture, Reading News, Speeches, Recitation of Poetry, a few creative demonstrations, and ends with the ‘National Anthem’. This provides the school with an excellent opportunity to develop the overall personality of the students and helps them shed their stage fear.",
+  "council_md": "The Student Council of DPS Visakhapatnam includes the Senior School council, House Prefects and Vice House Prefects, installed at the annual Investiture Ceremony.",
+  "rids_md": "DPS Visakhapatnam has been recognised by the British Council under the **Recognition of an International Dimension in Schools (RIDS) 2026–2029** — a mark of the school’s commitment to global citizenship.\n\nOur International Policy: to encourage young minds to develop understanding, tolerance and appreciation of the diverse cultures of the world, and to nurture global citizens who play a responsible role for sustainable development in a changing world.",
+  "facilities": [
+    {
+      "icon": "flask",
+      "title": "Science laboratories",
+      "text": "Physics, Chemistry and Biology labs (22 × 48 ft each) for practical learning."
+    },
+    {
+      "icon": "book",
+      "title": "Maths lab",
+      "text": "A dedicated Mathematics laboratory (22 × 45 ft)."
+    },
+    {
+      "icon": "monitor",
+      "title": "Computer science lab",
+      "text": "A 27 × 45 ft computer lab, plus digital classrooms."
+    },
+    {
+      "icon": "lib",
+      "title": "Library",
+      "text": "48 × 32 ft with 6,080 reference books, 12 magazines, 4 periodicals and 5 dailies."
+    },
+    {
+      "icon": "run",
+      "title": "Playground & indoor games",
+      "text": "A 32,375 sq. m playground and indoor games facilities."
+    },
+    {
+      "icon": "music",
+      "title": "Music & dance rooms",
+      "text": "Dedicated rooms for music and dance."
+    },
+    {
+      "icon": "bus",
+      "title": "Transport",
+      "text": "School’s own and outsourced buses."
+    },
+    {
+      "icon": "shield",
+      "title": "Health care",
+      "text": "Health and medical check-ups are done by VSGH."
+    }
+  ],
+  "houses": [
+    {
+      "name": "Chenab"
+    },
+    {
+      "name": "Ganges"
+    },
+    {
+      "name": "Jhelum"
+    },
+    {
+      "name": "Krishna"
+    }
+  ],
+  "clubs": [
+    "Quiz Club",
+    "Music",
+    "Dance",
+    "Public Speaking",
+    "Sports",
+    "Science",
+    "Yoga & Health Club",
+    "Art and Painting",
+    "Handwriting",
+    "Maths",
+    "Martial Art",
+    "Creative Writing",
+    "Environment",
+    "Dramatics",
+    "Gardening",
+    "First Aid Club"
+  ],
+  "extra_clubs": [
+    "Home Science",
+    "Information Technology",
+    "Library",
+    "Arabic Language",
+    "YESS Club",
+    "Sanskrit"
+  ],
+  "discipline": [
+    {
+      "title": "Yellow card",
+      "color": "#e3b505",
+      "intro": "Issued in an academic year for:",
+      "items": [
+        "Three late comings to school",
+        "Use of abusive language",
+        "Unruly & indisciplined behaviour in class",
+        "Pilfering, forging signatures"
+      ],
+      "note": ""
+    },
+    {
+      "title": "Grey card",
+      "color": "#8a8f98",
+      "intro": "",
+      "items": [
+        "Three yellow cards issued to a student in one academic year",
+        "Damage to school property",
+        "Physically hurting or injuring fellow mates"
+      ],
+      "note": ""
+    },
+    {
+      "title": "Red card",
+      "color": "#c0392b",
+      "intro": "",
+      "items": [
+        "Three grey cards issued to a student in his entire tenure at school",
+        "Use of vulgar language (oral or written)"
+      ],
+      "note": "If a student is issued a red card, it amounts to issuing of T.C."
+    }
+  ]
+}

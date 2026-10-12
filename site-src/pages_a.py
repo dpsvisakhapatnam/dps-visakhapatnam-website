@@ -51,16 +51,16 @@ def build_about():
         ('school', 'Our School'), ('philosophy', 'Philosophy'), ('principal', "Principal's Message"), ('society', 'DPS Society'), ('management', 'Management')]) + f'''
 <section class="section" id="school"><div class="wrap split top">
   <div class="reveal prose"><p class="eyebrow dark">About the school</p><h2>Brief introduction</h2>
-    <p>Delhi Public School Visakhapatnam was established in the year 1991 and is now imparting quality education with the most modern teaching techniques available to enable its students to compete with the world. It provides a congenial atmosphere for the total development of the whole personality and its integration with the society. It is committed to academic excellence, and appreciation of the worth of the individual student and educational leadership.</p>
+    <div data-md="school_md"><p>Delhi Public School Visakhapatnam was established in the year 1991 and is now imparting quality education with the most modern teaching techniques available to enable its students to compete with the world. It provides a congenial atmosphere for the total development of the whole personality and its integration with the society. It is committed to academic excellence, and appreciation of the worth of the individual student and educational leadership.</p>
     <p>The school tries to inculcate in students the values of personal hygiene, neatness in uniform, cleanliness of surroundings, graceful manners, obedience and discipline. The children are provided with an environment which fosters a spirit of enquiry and keen competition. Personal attention is given to each individual child. A competent and supporting staff takes care of the special needs of the children with full commitment.</p>
-    <p>Learning is a joy here and the school provides a very vibrant and inspiring atmosphere for the students to grow in a stress-free environment.</p></div>
+    <p>Learning is a joy here and the school provides a very vibrant and inspiring atmosphere for the students to grow in a stress-free environment.</p></div></div>
   <div class="reveal"><div class="photo" style="aspect-ratio:4/3"><img src="assets/gallery/g9.jpg" alt="Prefects at the Investiture Ceremony" loading="lazy"></div>
     <div class="grid g2" style="margin-top:20px"><div class="card"><b style="font:600 2rem var(--serif);color:var(--gold)">1991</b><p class="note" style="margin:0">Year of establishment</p></div><div class="card"><b style="font:600 2rem var(--serif);color:var(--gold)">CBSE</b><p class="note" style="margin:0">Affiliation No. 130110 (since 1992)</p></div></div></div>
 </div></section>
 
 <section class="section alt" id="philosophy"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">What we believe</p><h2>Motto, philosophy &amp; aim</h2></div>
-  <div class="grid g3">
+  <div class="grid g3" data-list="pcards" data-tpl="pcard">
     <article class="card reveal"><div class="ico">{ICON['heart']}</div><h3>Philosophy</h3><p><strong>Motto: Service before Self.</strong></p><p>To develop all four human dimensions — Body, Mind, Heart and Soul. To teach to learn for: the Body to live, Mind to learn, Heart to love, Soul to leave a legacy.</p><p>To enable students to excel in academics and recognise their full potential and develop good habits so that they can contribute towards the progress of the world — utilising the three great gifts given by God to all human beings: Power of Choice, Power of Intelligence, Power of Conscience.</p></article>
     <article class="card reveal"><div class="ico">{ICON['cap']}</div><h3>Aim</h3><p>Our aim is to impart sound and liberal education to boys and girls during their impressionable years — education that would lay stress on character building, team work, esprit-de-corps, physical development and infuse in them a spirit of adventure, fair play and justice.</p><p>We aim to develop among our students a feeling of pride in Indian culture and produce citizens who will be truly Indian and above social, communal, religious or provincial prejudices.</p></article>
     <article class="card reveal"><div class="ico">{ICON['globe']}</div><h3>International Policy</h3><p>To encourage young minds to develop understanding, tolerance and appreciation of diverse cultures of the world.</p><p>To nurture global citizens who play a responsible role for sustainable development in a changing world.</p></article>
@@ -72,12 +72,12 @@ def build_about():
   <div class="p-grid" style="align-items:start">
     <figure class="reveal"><img src="{px}" alt="Mr. Samir Kumar Pandey, Principal" width="852" height="965" loading="lazy"></figure>
     <div class="reveal prose"><p class="eyebrow dark">Principal’s message</p><h2>Principal speaks</h2>
-      <blockquote><p>“The will to win, the desire to succeed, the urge to reach your full potential… these are the keys that will unlock the door to personal excellence.”</p></blockquote>
-      <p>Confucius couldn’t have summed up better what we at DPS wish for every student that steps into our portals. DPS Visakhapatnam dates back to 1991 when the school was set up in the Steel Township under the aegis of the Delhi Public School Society, New Delhi. From then onwards, the school has grown in strength with the continuous support of Visakhapatnam Steel Plant Management, who readily lend a helping hand for our upkeep and smooth functioning. The DPS Society too has rendered invaluable support with its guidance, teacher training programmes, Inter DPS Competitions etc.</p>
+      <blockquote><p data-text="principal_quote">“The will to win, the desire to succeed, the urge to reach your full potential… these are the keys that will unlock the door to personal excellence.”</p></blockquote>
+      <div data-md="principal_md"><p>Confucius couldn’t have summed up better what we at DPS wish for every student that steps into our portals. DPS Visakhapatnam dates back to 1991 when the school was set up in the Steel Township under the aegis of the Delhi Public School Society, New Delhi. From then onwards, the school has grown in strength with the continuous support of Visakhapatnam Steel Plant Management, who readily lend a helping hand for our upkeep and smooth functioning. The DPS Society too has rendered invaluable support with its guidance, teacher training programmes, Inter DPS Competitions etc.</p>
       <p>The school curriculum provides ample opportunities to go beyond tests and textbooks. Students can foray into numerous activities — be it learning a new language, a new dance form, a new prayer song, a new technique of painting or it could be just witnessing a well orchestrated Morning Assembly — each a new experience, a new joy, all helping to nurture and hone new skills. At DPS, we are ever committed to enable every child to grow to his fullest, which undoubtedly leads to an exhilarating sense of achievement. Added to this, is the spirit of camaraderie and bonhomie fostered through Inter-House competitions and sports activities.</p>
       <p>A well stocked library that is replenished periodically is the DPS way of motivating children to rediscover the pleasure of reading. Books are indeed a “unique portable magic” that transport you from one world to another and thereby open a whole new realm of “Light and Wisdom”.</p>
       <p>“Children are our priority, change is the reality, collaboration is our strategy.” Technology and automation have been incorporated in the school system, ensuring faster and more convenient way of interaction with our stakeholders. Digital classrooms have been introduced to equip teachers and students with 21st century skills, necessary for all to be lifelong learners. Thus, DPS re-affirms that we need to be adaptive and accommodating in this changing world. It is only a collaborative effort of teachers and parents that can lay out the right path, where students are prepared to face all challenges of the world.</p>
-      <p class="sig"><strong>S K Pandey</strong><br>Principal, DPS Visakhapatnam</p></div>
+      <p class="sig"><strong>S K Pandey</strong><br>Principal, DPS Visakhapatnam</p></div></div>
   </div>
   <div class="photo reveal" style="margin-top:44px;aspect-ratio:21/9"><img src="{pm}" alt="The Principal at his desk" loading="lazy" style="object-position:center 30%"></div>
 </div></section>
@@ -86,19 +86,19 @@ def build_about():
   <div class="reveal"><p class="eyebrow dark">DPS Society</p><h2>A legend in the field of education</h2>
     <div class="grid g2" style="margin-top:24px"><div class="card"><b style="font:600 2.4rem var(--serif);color:var(--gold)">200+</b><p class="note" style="margin:0">Schools under the Society, in India and abroad</p></div><div class="card"><b style="font:600 2.4rem var(--serif);color:var(--gold)">68 yrs</b><p class="note" style="margin:0">Serving the field of education</p></div></div></div>
   <div class="reveal prose">
-    <p>Delhi Public School has been serving the Society in the field of education for the last 68 years. There are presently over 200 Schools under its aegis both in and outside India. The growing number of schools under this society signifies how the need to provide meaningful education to a large number of children desirous of growing into educated and liberated human beings has been fulfilled. Founded and managed by distinguished members and luminaries of society culled from various walks of life, the organisation has always guided its member schools on the path of progress with their visionary approach and lofty ideals. Consequently, Delhi Public Schools have become significant portals of learning and growth of young minds.</p>
+    <div data-md="society_md"><p>Delhi Public School has been serving the Society in the field of education for the last 68 years. There are presently over 200 Schools under its aegis both in and outside India. The growing number of schools under this society signifies how the need to provide meaningful education to a large number of children desirous of growing into educated and liberated human beings has been fulfilled. Founded and managed by distinguished members and luminaries of society culled from various walks of life, the organisation has always guided its member schools on the path of progress with their visionary approach and lofty ideals. Consequently, Delhi Public Schools have become significant portals of learning and growth of young minds.</p>
     <p>The main aim of this society is to provide an all-round development and sound moral base. Fostering character building and nurturing the inquisitive spirit of children, encouraging scientific temperament and strengthening social bonds, are constant deeds here. Mr. V. K. Shunglu, Chairman, DPS Society is the constant beacon and source of strength.</p>
     <p>From a small beginning in the President’s Estate in 1941 as Church High School to Naveen Bharat School in 1947 and finally in 1949 at its present location of Mathura Road, DPS has traversed a long journey. The birth of a new nation in 1947 was in a way the beginning of DPS (called Naveen Bharat then). A vital time in the history of our nation, when a beginning was made to fulfil a social, national need. DPS was not a silent witness to the trials and tribulations of the growing metropolis but contributed richly to the growth of the capital especially academics. DPS Mathura Road was the only DPS till 1972. But the parent DPS was ready to spread its wings. The many offsprings, 95 schools as on 1st September 2002 that followed from R. K. Puram in 1972 are simple assertions of the strength that is DPS. Yet what has remained unchanged is the zest and spirit to achieve and excel. The society is managing and maintaining a uniform level of excellence, hallmark of a Delhi Public School, with schools set up over vast regions with diverse cultural backgrounds, socio-economic conditions and educational contrasts. This diversity is respected while ensuring that all the schools under the aegis of the society follow a uniform educational practice.</p>
-    <p>World famous DPS teachers’ work ethic and dynamism is the bedrock on which rests the DPS edifice. Highly qualified, talented faculty with right skills and positive attitude goes beyond the call of duty to provide appropriately contextual learning experiences to young minds. The DPS faculty boasts of University top rankers and winners of national and international awards. These teachers have committed their working lives to an endeavour centred on building new generations. In-service teacher education programmes, national and international assignments and exposure visits ensure professional and personal growth of these lifelong learners.</p>
+    <p>World famous DPS teachers’ work ethic and dynamism is the bedrock on which rests the DPS edifice. Highly qualified, talented faculty with right skills and positive attitude goes beyond the call of duty to provide appropriately contextual learning experiences to young minds. The DPS faculty boasts of University top rankers and winners of national and international awards. These teachers have committed their working lives to an endeavour centred on building new generations. In-service teacher education programmes, national and international assignments and exposure visits ensure professional and personal growth of these lifelong learners.</p></div>
     <p><a class="btn btn-line" href="http://www.dpsfamily.org/" target="_blank" rel="noopener">Visit the DPS Society →</a></p></div>
 </div></section>
 
 <section class="section" id="management"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Organisational structure</p><h2>Meet our mentors</h2></div>
   <h3 class="reveal">Governing Body, DPS Society, New Delhi</h3>
-  <div class="mentors reveal">{mentor_cards(GOV)}</div>
+  <div class="mentors" data-list="gov" data-tpl="mentor">{mentor_cards(GOV)}</div>
   <h3 class="reveal" style="margin-top:40px">School Managing Committee, DPS Visakhapatnam Steel Plant</h3>
-  <div class="mentors reveal">{mentor_cards(MC)}</div>
+  <div class="mentors" data-list="mc" data-tpl="mentor">{mentor_cards(MC)}</div>
   <p style="margin-top:26px"><a class="btn btn-line" href="disclosure.html#school-information">Committees &amp; school information →</a></p>
 </div></section>'''
     return page('about.html', 'About Us', 'About Delhi Public School Visakhapatnam: philosophy, aim, principal’s message, the DPS Society and our managing committee.', 'About', body)
@@ -149,9 +149,9 @@ def build_academics():
         ('methodology', 'Methodology'), ('courses', 'Courses'), ('promotion', 'Promotion'), ('awards', 'Awards & Rewards'), ('calendar', 'Calendars'), ('days', 'Important Days'), ('strength', 'Student Strength'), ('training', 'Staff Training')]) + f'''
 <section class="section" id="methodology"><div class="wrap split top">
   <div class="reveal prose"><p class="eyebrow dark">Academic information</p><h2>Teaching methodology</h2>
-    <p>Keeping in mind the fact that for most of the students in our scenario, English is a second language, we at Delhi Public School, Visakhapatnam Steel Plant lay emphasis on developing the oral skills of the little ones who seek admission in pre-primary classes. The best way to pick up the language is to follow the natural way, in which one learns his or her mother tongue, i.e. to develop the skills in the natural order of <strong>Listening, Speaking, Reading and Writing</strong>.</p>
+    <div data-md="methodology_md"><p>Keeping in mind the fact that for most of the students in our scenario, English is a second language, we at Delhi Public School, Visakhapatnam Steel Plant lay emphasis on developing the oral skills of the little ones who seek admission in pre-primary classes. The best way to pick up the language is to follow the natural way, in which one learns his or her mother tongue, i.e. to develop the skills in the natural order of <strong>Listening, Speaking, Reading and Writing</strong>.</p>
     <p>In higher classes we follow the interactive method. Stress is laid more on “Learn, Learner, Learning” than on “Teach, Teacher, Teaching” for we sincerely believe that it is possible to learn without a teacher but it is not possible to learn without a learner.</p>
-    <p>We also believe in giving the optimum homework, which the child should be able to do on his/her own.</p></div>
+    <p>We also believe in giving the optimum homework, which the child should be able to do on his/her own.</p></div></div>
   <div class="grid reveal">
     <div class="card"><div class="ico">{ICON['sparkle']}</div><h3>Listen · Speak · Read · Write</h3><p>Language is built the natural way, starting with oral skills in the pre-primary years.</p></div>
     <div class="card"><div class="ico">{ICON['book']}</div><h3>Learner at the centre</h3><p>Interactive teaching in the higher classes, with optimum homework a child can do independently.</p></div>
@@ -160,32 +160,32 @@ def build_academics():
 
 <section class="section alt" id="courses"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Curriculum</p><h2>Courses offered &amp; promotion policy</h2></div>
-  <div class="prose reveal">{promo}</div>
+  <div class="prose"><div data-md="courses_md">{promo}</div></div>
 </div></section>
 
 <section class="section" id="awards"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Encouragement systems</p><h2>Awards &amp; rewards policy</h2><p>DPS Visakhapatnam believes in encouraging achievers in all fields — academics, sports and co-curricular activities.</p></div>
-  <div class="prose reveal">{awards}</div>
+  <div class="prose"><div data-md="awards_md">{awards}</div></div>
 </div></section>
 
 <section class="section alt" id="calendar"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Plan your year</p><h2>Calendars</h2><p>Academic calendar, formative assessment schedule and competition schedules. Click any image to enlarge.</p></div>
-  <div class="tabs reveal" data-tabs><div class="tablist" role="tablist" aria-label="Calendars">{tabs}</div>{panels}</div>
+  <div class="tabs" data-tabs data-list="calendars" data-tpl="calendars"><div class="tablist" role="tablist" aria-label="Calendars">{tabs}</div>{panels}</div>
 </div></section>
 
 <section class="section" id="days"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">List of important days</p><h2>Days we celebrate</h2><p>The next upcoming day is highlighted automatically.</p></div>
-  <div class="days reveal" id="daysAll">{days_html()}</div>
+  <div class="days" id="daysAll" data-list="days" data-tpl="day">{days_html()}</div>
 </div></section>
 
 <section class="section alt" id="strength"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">2025-26</p><h2>Class &amp; section-wise student strength</h2></div>
-  <div class="reveal" style="max-width:900px">{docimg('docs/STUDENT STRENGTH 2025-26.jpg', 'Student strength 2025-26')}</div>
+  <div style="max-width:900px" data-docimg="strength_image">{docimg('docs/STUDENT STRENGTH 2025-26.jpg', 'Student strength 2025-26')}</div>
 </div></section>
 
 <section class="section" id="training"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Professional growth</p><h2>Staff training details</h2><p>DPS teachers keep learning — workshop records by year.</p></div>
-  <ul class="doclist reveal">{train}</ul>
+  <ul class="doclist" data-list="training" data-tpl="doclink">{train}</ul>
 </div></section>'''
     return page('academics.html', 'Academics', 'Teaching methodology, courses and subject combinations, promotion policy, awards, school calendars and student strength at DPS Visakhapatnam.', 'Academics', body)
 
@@ -240,7 +240,7 @@ def build_admissions():
         ('process', 'Process'), ('fees', 'Fees 2026-27'), ('uniform', 'Uniform'), ('forms', 'Forms'), ('withdrawal', 'Withdrawal & TC'), ('faq', 'FAQs')]) + f'''
 <section class="section" id="process"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Admission process</p><h2>From registration to the first day</h2></div>
-  <div class="steps">{sh}</div>
+  <div class="steps" data-list="steps" data-tpl="step">{sh}</div>
   <div class="callout reveal" style="margin-top:28px"><b>Written test:</b> English, Hindi and Mathematics. For Nursery, a meeting with the concerned teachers and the Principal along with parents. <button class="btn btn-gold btn-sm" data-open="enquiry" style="margin-left:10px">Send an enquiry</button></div>
 </div></section>
 
@@ -268,7 +268,7 @@ def build_admissions():
 </div></section>
 
 <section class="section" id="withdrawal"><div class="wrap split top">
-  <div class="reveal prose"><p class="eyebrow dark">Policy</p><h2>Withdrawal procedure</h2>{withdraw.split('Withdrawal Procedure')[-1] if 'Withdrawal Procedure' in withdraw else withdraw}</div>
+  <div class="reveal prose"><p class="eyebrow dark">Policy</p><h2>Withdrawal procedure</h2><div data-md="withdrawal_md">{withdraw.split('Withdrawal Procedure')[-1] if 'Withdrawal Procedure' in withdraw else withdraw}</div></div>
   <div class="reveal"><div class="card"><h3>Transfer certificate</h3><p>Transfer Certificates are issued only when all dues of the school are settled. View the sample format below.</p>
     <p><a class="btn btn-line btn-sm" href="{tc}" target="_blank" rel="noopener">Sample TC (PDF)</a></p></div>
 </div>
@@ -277,6 +277,6 @@ def build_admissions():
 <section class="section alt" id="faq"><div class="wrap split top">
   <div class="reveal"><p class="eyebrow dark">Quick answers</p><h2>Frequently asked questions</h2><p>Answers are drawn from the school’s published admission, uniform, promotion and withdrawal policies.</p>
     <p><button class="btn btn-green" data-open="enquiry">Still have a question?</button></p></div>
-  <div class="acc reveal">{faq}</div>
+  <div class="acc" data-list="faq" data-tpl="faq">{faq}</div>
 </div></section>'''
     return page('admissions.html', 'Admissions', 'Admission process, fee structure 2026-27, school uniform, application forms, withdrawal policy and FAQs for DPS Visakhapatnam.', 'Admissions', body)

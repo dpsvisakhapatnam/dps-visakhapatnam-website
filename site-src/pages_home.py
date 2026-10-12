@@ -111,9 +111,9 @@ def build_index():
     <div class="slide" style="background-image:url(assets/gallery/g21.jpg)"></div>
   </div>
   <div class="wrap hero-inner">
-    <p class="eyebrow">Established 1991 · Under the aegis of the DPS Society, New Delhi</p>
+    <p class="eyebrow" data-text="hero_eyebrow">Established 1991 · Under the aegis of the DPS Society, New Delhi</p>
     <h1>Service <em>before</em> Self.</h1>
-    <p class="lead">For over three decades we have nurtured the body, mind, heart and soul of every child — so they can excel in academics and leave a legacy.</p>
+    <p class="lead" data-text="hero_lead">For over three decades we have nurtured the body, mind, heart and soul of every child — so they can excel in academics and leave a legacy.</p>
     <div class="hero-cta">
       <a class="btn btn-gold" href="admissions.html#process">Admissions</a>
       <a class="btn btn-ghost" href="contact.html#visit">Plan a campus visit</a>
@@ -124,7 +124,7 @@ def build_index():
   <div class="dots" role="tablist" aria-label="Choose background photo"></div>
 </section>
 
-<section class="stats" aria-label="School highlights"><div class="wrap stat-grid">{stat_html}</div></section>
+<section class="stats" aria-label="School highlights"><div class="wrap stat-grid" data-list="stats" data-tpl="stat">{stat_html}</div></section>
 
 <section class="section tight"><div class="wrap">
   <div class="quick reveal">
@@ -151,8 +151,8 @@ def build_index():
     <div class="reveal">
       <p class="eyebrow dark">About the school</p>
       <h2>A place where learning is a joy</h2>
-      <p>Delhi Public School Visakhapatnam was established in 1991 and imparts quality education with the most modern teaching techniques, so its students can compete with the world. It provides a congenial atmosphere for the total development of the whole personality and its integration with society.</p>
-      <p>The school inculcates personal hygiene, neatness, cleanliness, graceful manners and discipline, in an environment that fosters a spirit of enquiry and keen competition — with personal attention to every child and a competent, supportive staff.</p>
+      <div data-md="about_md"><p>Delhi Public School Visakhapatnam was established in 1991 and imparts quality education with the most modern teaching techniques, so its students can compete with the world. It provides a congenial atmosphere for the total development of the whole personality and its integration with society.</p>
+      <p>The school inculcates personal hygiene, neatness, cleanliness, graceful manners and discipline, in an environment that fosters a spirit of enquiry and keen competition — with personal attention to every child and a competent, supportive staff.</p></div>
       <p><a class="btn btn-green" href="about.html">Read our story</a></p>
     </div>
     <div class="photo reveal" style="aspect-ratio:4/3"><img src="assets/gallery/g12.jpg" alt="Annual Awards and Investiture ceremony" loading="lazy"></div>
@@ -187,7 +187,7 @@ def build_index():
 
 <section class="section alt" id="why"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Why DPS Visakhapatnam</p><h2>Everything a child needs to grow</h2><p>From classrooms and labs to playgrounds and stages — a campus built for the whole child.</p></div>
-  <div class="grid g4">{why_html}</div>
+  <div class="grid g4" data-list="why" data-tpl="why">{why_html}</div>
 </div></section>
 
 <section class="section" id="recognition"><div class="wrap">
@@ -207,7 +207,7 @@ def build_index():
   <figure class="reveal"><img src="{px}" alt="Mr. Samir Kumar Pandey, Principal" width="852" height="965" loading="lazy"></figure>
   <div class="reveal">
     <p class="eyebrow dark">Principal speaks</p>
-    <blockquote><p>“The will to win, the desire to succeed, the urge to reach your full potential… these are the keys that will unlock the door to personal excellence.”</p></blockquote>
+    <blockquote><p data-text="principal_quote" data-src="about">“The will to win, the desire to succeed, the urge to reach your full potential… these are the keys that will unlock the door to personal excellence.”</p></blockquote>
     <p class="sig"><strong>Samir Kumar Pandey</strong><br>Principal</p>
     <p><a class="btn btn-green" href="about.html#principal">Read the full message</a></p>
   </div>
@@ -237,7 +237,7 @@ def build_index():
 
 <section class="section alt" id="admissions"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Admissions</p><h2>Join the DPS family</h2><p>Simple, transparent and personal. Here is how a year of admissions flows.</p></div>
-  <div class="steps">{steps_html}</div>
+  <div class="steps" data-list="steps" data-src="admissions" data-tpl="step">{steps_html}</div>
   <p style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-green" href="admissions.html">Admission details</a><button class="btn btn-line" data-open="enquiry">Send an enquiry</button><a class="btn btn-line" href="{doc('docs/Std_ApplicationForm.pdf')}">Application form (PDF)</a></p>
 </div></section>
 
@@ -245,7 +245,7 @@ def build_index():
   <div class="split top">
     <div class="reveal"><p class="eyebrow dark">Important days</p><h2>Our school year at a glance</h2><p>The school observes national and international days throughout the year. The next upcoming one is highlighted for you.</p>
       <p><a class="btn btn-line" href="academics.html#calendar">Full calendars</a></p></div>
-    <div class="days reveal" id="daysHome" style="grid-template-columns:1fr">{days_html()}</div>
+    <div class="days" id="daysHome" data-list="days" data-src="academics" data-tpl="day" style="grid-template-columns:1fr">{days_html()}</div>
   </div>
 </div></section>
 

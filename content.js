@@ -147,6 +147,74 @@
     $('#albumsList').innerHTML = al.map((x, k) => { const ph = P(x); return ph.length ? `<button class="album" data-album="${k}">${imgTag(ph[0], 520, x.title)}<div><b>${esc(x.title)}</b><span>${ph.length} photo${ph.length === 1 ? '' : 's'}${x.year ? ' · ' + esc(x.year) : ''}</span></div></button>` : ''; }).join('');
   });
 
+  /* editable page content: data-text / data-md / data-docimg / data-list (content/page-<name>.json) */
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const pageName = (document.body.dataset.page || 'index.html').replace(/\.html$/, '');
+  const MON = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const WD = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const ORD = ['', '1st', '2nd', '3rd', '4th'];
+  let markedP;
+  const loadMarked = () => markedP || (markedP = new Promise(res => {
+    if (window.marked) return res(window.marked);
+    const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js';
+    sc.onload = () => res(window.marked); sc.onerror = () => res(null); document.head.appendChild(sc);
+  }));
+  const cleanHtml = html => {
+    const t = document.createElement('template'); t.innerHTML = html;
+    t.content.querySelectorAll('script,iframe,object,embed,style,link,meta,form').forEach(n => n.remove());
+    t.content.querySelectorAll('*').forEach(n => [...n.attributes].forEach(a => { if (/^on/i.test(a.name) || (/^(href|src|xlink:href)$/i.test(a.name) && /^\s*javascript:/i.test(a.value))) n.removeAttribute(a.name); }));
+    t.content.querySelectorAll('a[href^="http"]').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+    t.content.querySelectorAll('table').forEach(tb => {
+      const w = document.createElement('div'); w.className = 'tbl-wrap'; tb.classList.add('t'); tb.replaceWith(w); w.appendChild(tb);
+      const th = [...tb.querySelectorAll('thead th')]; if (th.length && th.every(x => !x.textContent.trim())) tb.querySelector('thead').remove();
+    });
+    return t.innerHTML;
+  };
+  const mdToHtml = (m, mk) => mk ? cleanHtml(mk.parse(String(m), { mangle: false, headerIds: false })) : '<p>' + esc(m) + '</p>';
+  const safeColor = c => /^#[0-9a-f]{3,8}$/i.test(c || '') ? c : '#0e4a2c';
+  const houseCls = (n, i) => ({ chenab: 'h-chenab', ganges: 'h-ganges', jhelum: 'h-jhelum', krishna: 'h-krishna' }[String(n).toLowerCase().trim()] || ['h-chenab', 'h-ganges', 'h-jhelum', 'h-krishna'][i % 4]);
+  const TPL = {
+    stat: i => `<div><b>${esc(i.number)}</b><span>${esc(i.label)}</span></div>`,
+    why: (i, k, c) => `<article class="card hover"><div class="ico">${(c.icons || {})[i.icon] || ''}</div><h3>${esc(i.title)}</h3><p>${esc(i.text)}</p></article>`,
+    step: i => `<div class="step"><small>${esc(i.when)}</small><h3>${esc(i.title)}</h3><p>${esc(i.text)}</p></div>`,
+    house: (i, k) => `<div class="house ${houseCls(i.name, k)}"><b>${esc(i.name)}</b><span>House</span></div>`,
+    pill: i => `<span class="pill" style="font-size:.85rem;padding:.4em 1em">${esc(i)}</span> `,
+    pill2: i => `<span class="pill" style="font-size:.85rem;padding:.4em 1em;background:#fbefd0;color:#6b4a00">${esc(i)}</span> `,
+    dcard: i => `<article class="card" style="border-top:6px solid ${safeColor(i.color)}"><h3>${esc(i.title)}</h3>${i.intro ? `<p>${esc(i.intro)}</p>` : ''}<ul>${(i.items || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>${i.note ? `<p class="note">${esc(i.note)}</p>` : ''}</article>`,
+    faq: i => `<details><summary>${esc(i.question)}</summary><div class="ans"><p>${esc(i.answer)}</p></div></details>`,
+    mentor: i => `<article class="person">${i.photo ? imgTag(i.photo, 360, i.name) : `<div class="ph">${esc(initials(i.name))}</div>`}<div><b>${esc(i.name)}</b><span>${esc(i.role)}</span></div></article>`,
+    pcard: (i, k, c) => `<article class="card"><div class="ico">${(c.icons || {})[i.icon] || ''}</div><h3>${esc(i.title)}</h3>${mdToHtml(i.body || '', c.mk)}</article>`,
+    doclink: i => docLi(i.title, i.file, 'Download', ''),
+    day: i => i.nth ? `<div class="day" data-m="${esc(i.month)}" data-n="${esc(i.nth)}" data-w="${esc(i.weekday)}"><div class="d"><b>${ORD[+i.nth] || i.nth}</b><span>${WD[+i.weekday] ? WD[+i.weekday].slice(0, 3) : ''} · ${MON[+i.month] || ''}</span></div><p>${esc(i.title)}</p></div>`
+      : `<div class="day" data-m="${esc(i.month)}" data-d="${esc(i.day)}"><div class="d"><b>${esc(i.day)}</b><span>${MON[+i.month] || ''}</span></div><p>${esc(i.title)}</p></div>`,
+  };
+  const calendars = (el, items) => {
+    el.innerHTML = `<div class="tablist" role="tablist" aria-label="Calendars">${items.map((c, k) => `<button role="tab" aria-selected="${k === 0}" aria-controls="cal${k}" id="bcal${k}"${k ? ' tabindex="-1"' : ''}>${esc(c.title)}</button>`).join('')}</div>` +
+      items.map((c, k) => `<div class="panel" role="tabpanel" id="cal${k}" aria-labelledby="bcal${k}"${k ? ' hidden' : ''}><button class="docimg" data-zoom="${encodeURI(rel(c.image))}" data-cap="${esc(c.title)}"><img src="${encodeURI(rel(c.image))}" alt="${esc(c.title)}" loading="lazy"></button><p style="margin:14px 0 0"><a class="btn btn-line btn-sm" href="${encodeURI(rel(c.image))}" download>Download image</a></p></div>`).join('');
+  };
+  const pageEls = $$('[data-text],[data-md],[data-docimg],[data-list]');
+  if (pageEls.length) {
+    const names = [...new Set(pageEls.map(e => e.dataset.src || pageName))];
+    const needMd = pageEls.some(e => e.dataset.md !== undefined || e.dataset.tpl === 'pcard');
+    const needIcons = pageEls.some(e => ['why', 'pcard'].includes(e.dataset.tpl));
+    jobs.push(Promise.all([Promise.all(names.map(n => need('page-' + n))), needMd ? loadMarked() : null, needIcons ? fetch('assets/icons.json').then(r => r.json()).catch(() => ({})) : null]).then(([, mk, icons]) => {
+      const ctx = { mk, icons };
+      pageEls.forEach(el => {
+        try {
+          const d = data['page-' + (el.dataset.src || pageName)]; if (!d) return;
+          if (el.dataset.text !== undefined) { const v = d[el.dataset.text]; if (v) el.textContent = v; }
+          else if (el.dataset.md !== undefined) { const v = d[el.dataset.md]; if (v && String(v).trim()) el.innerHTML = mdToHtml(v, mk); }
+          else if (el.dataset.docimg !== undefined) { const v = d[el.dataset.docimg]; if (v) { const b = el.querySelector('.docimg'); if (b) { const u = encodeURI(rel(v)); b.dataset.zoom = u; const im = b.querySelector('img'); if (im) im.src = u; } } }
+          else if (el.dataset.list !== undefined) {
+            const arr = d[el.dataset.list]; if (!Array.isArray(arr) || !arr.length) return;
+            if (el.dataset.tpl === 'calendars') calendars(el, arr);
+            else el.innerHTML = arr.map((it, k) => (TPL[el.dataset.tpl] || (() => ''))(it, k, ctx)).join('');
+          }
+        } catch (e) { console.warn('page content', e); }
+      });
+    }));
+  }
+
   window.DPS = Object.assign(window.DPS || {}, {
     data,
     // entries for the site search so newly published items are findable immediately

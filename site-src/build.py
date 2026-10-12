@@ -38,6 +38,10 @@ for fn, builder in PAGES.items():
         key = (m.group(1))
         if key in seen: continue
         seen.add(key); index.append({'t': text_of(m.group(2)), 'u': m.group(1), 'd': text_of(m.group(3)), 'k': 'Download'})
+import seed_pages
+seed_pages.run()
+from layout import ICON
+json.dump(ICON, open(os.path.join(ROOT, 'assets', 'icons.json'), 'w'), separators=(',', ':'))
 json.dump(index, open(os.path.join(ROOT, 'assets', 'search.json'), 'w'), separators=(',', ':'), ensure_ascii=False)
 base = 'https://example.org/'
 urls = ''.join(f'<url><loc>{base}{fn if fn != "index.html" else ""}</loc></url>' for fn in PAGES if fn != '404.html')

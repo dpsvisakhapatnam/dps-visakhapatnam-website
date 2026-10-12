@@ -31,33 +31,33 @@ def build_campus():
         ('infrastructure', 'Infrastructure'), ('houses', 'Houses & Clubs'), ('assembly', 'Morning Assembly'), ('council', 'Student Council'), ('discipline', 'Discipline'), ('rids', 'RIDS')]) + f'''
 <section class="section" id="infrastructure"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Infrastructure</p><h2>A campus built for learning</h2><p>Spread over 13 acres (52,609 sq. m) in the Steel Township, Ukkunagaram.</p></div>
-  <div class="grid g4" style="margin-bottom:46px">{fh}</div>
-  <div class="prose" style="max-width:none"><div class="reveal">{infra}</div></div>
+  <div class="grid g4" style="margin-bottom:46px" data-list="facilities" data-tpl="why">{fh}</div>
+  <div class="prose" style="max-width:none"><div data-md="infra_md">{infra}</div></div>
 </div></section>
 
 <section class="section alt" id="houses"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Functioning of the school</p><h2>House system &amp; clubs</h2><p>The house system forms the basis of all competitions in the school. It promotes team spirit, group loyalty and healthy competition. The school is divided into four houses named after rivers; students compete in Inter-House competitions, demonstrating their talents and skills to bring glory to their houses.</p></div>
-  <div class="houses reveal"><div class="house h-chenab"><b>Chenab</b><span>House</span></div><div class="house h-ganges"><b>Ganges</b><span>House</span></div><div class="house h-jhelum"><b>Jhelum</b><span>House</span></div><div class="house h-krishna"><b>Krishna</b><span>House</span></div></div>
-  <div class="reveal" style="margin-top:40px"><h3>Clubs &amp; activities</h3><p class="note">Activities for Classes II to XII</p><p style="line-height:2.4">{ch}</p>
-  <p class="note" style="margin-top:20px">Additional activities for Classes VI onwards</p><p style="line-height:2.4">{ex}</p></div>
+  <div class="houses" data-list="houses" data-tpl="house"><div class="house h-chenab"><b>Chenab</b><span>House</span></div><div class="house h-ganges"><b>Ganges</b><span>House</span></div><div class="house h-jhelum"><b>Jhelum</b><span>House</span></div><div class="house h-krishna"><b>Krishna</b><span>House</span></div></div>
+  <div class="reveal" style="margin-top:40px"><h3>Clubs &amp; activities</h3><p class="note">Activities for Classes II to XII</p><p style="line-height:2.4" data-list="clubs" data-tpl="pill">{ch}</p>
+  <p class="note" style="margin-top:20px">Additional activities for Classes VI onwards</p><p style="line-height:2.4" data-list="extra_clubs" data-tpl="pill2">{ex}</p></div>
 </div></section>
 
 <section class="section" id="assembly"><div class="wrap split top">
   <div class="reveal prose"><p class="eyebrow dark">Various activities</p><h2>Conducting morning assemblies</h2>
-    <p>Morning Assembly is conducted by one particular class for the whole week. It is held on Mondays, Wednesdays and Fridays. On Mondays and Wednesdays it is held in English and on Fridays in Telugu / Hindi / Sanskrit.</p>
-    <p>The Morning Assembly begins with ‘Vande Mataram’ and is followed by prayers, then mass PT, Patriotic Song, Scripture, Reading News, Speeches, Recitation of Poetry, a few creative demonstrations, and ends with the ‘National Anthem’. This provides the school with an excellent opportunity to develop the overall personality of the students and helps them shed their stage fear.</p></div>
+    <div data-md="assembly_md"><p>Morning Assembly is conducted by one particular class for the whole week. It is held on Mondays, Wednesdays and Fridays. On Mondays and Wednesdays it is held in English and on Fridays in Telugu / Hindi / Sanskrit.</p>
+    <p>The Morning Assembly begins with ‘Vande Mataram’ and is followed by prayers, then mass PT, Patriotic Song, Scripture, Reading News, Speeches, Recitation of Poetry, a few creative demonstrations, and ends with the ‘National Anthem’. This provides the school with an excellent opportunity to develop the overall personality of the students and helps them shed their stage fear.</p></div></div>
   <div class="photo reveal" style="aspect-ratio:4/3"><img src="assets/gallery/g10.jpg" alt="Children on stage" loading="lazy"></div>
 </div></section>
 
 <section class="section alt" id="council"><div class="wrap">
-  <div class="section-head reveal"><p class="eyebrow dark">Academic year 2025-26</p><h2>Student Council — our flag bearers</h2><p>The Student Council of DPS Visakhapatnam includes the Senior School council, House Prefects and Vice House Prefects, installed at the annual Investiture Ceremony.</p></div>
+  <div class="section-head reveal"><p class="eyebrow dark">Academic year 2025-26</p><h2>Student Council — our flag bearers</h2><p data-md="council_md">The Student Council of DPS Visakhapatnam includes the Senior School council, House Prefects and Vice House Prefects, installed at the annual Investiture Ceremony.</p></div>
   <div class="grid g3 reveal"><div class="card"><div class="ico">{ICON['users']}</div><h3>Senior School</h3><p>Head Boy, Head Girl and senior council members.</p></div><div class="card"><div class="ico">{ICON['trophy']}</div><h3>House Prefects</h3><p>One for each of the four houses.</p></div><div class="card"><div class="ico">{ICON['heart']}</div><h3>Vice House Prefects</h3><p>Supporting prefects in each house.</p></div></div>
   <div class="grid g2" style="margin-top:20px"><div class="photo reveal" style="aspect-ratio:4/3"><img src="assets/gallery/g9.jpg" alt="Investiture ceremony group" loading="lazy"></div><div class="photo reveal" style="aspect-ratio:4/3"><img src="assets/gallery/g12.jpg" alt="Investiture ceremony awards" loading="lazy"></div></div>
 </div></section>
 
 <section class="section" id="discipline"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Punishment policy</p><h2>A clear, fair disciplinary system</h2></div>
-  <div class="grid g3 reveal">
+  <div class="grid g3" data-list="discipline" data-tpl="dcard">
     <article class="card" style="border-top:6px solid #e3b505"><h3>Yellow card</h3><p>Issued in an academic year for:</p><ul><li>Three late comings to school</li><li>Use of abusive language</li><li>Unruly &amp; indisciplined behaviour in class</li><li>Pilfering, forging signatures</li></ul></article>
     <article class="card" style="border-top:6px solid #8a8f98"><h3>Grey card</h3><ul><li>Three yellow cards issued to a student in one academic year</li><li>Damage to school property</li><li>Physically hurting or injuring fellow mates</li></ul></article>
     <article class="card" style="border-top:6px solid #c0392b"><h3>Red card</h3><ul><li>Three grey cards issued to a student in his entire tenure at school</li><li>Use of vulgar language (oral or written)</li></ul><p class="note">If a student is issued a red card, it amounts to issuing of T.C.</p></article>
@@ -67,8 +67,8 @@ def build_campus():
 <section class="section alt" id="rids"><div class="wrap split">
   <div class="reveal"><button class="docimg" data-zoom="{rids}" data-cap="RIDS 2026–2029"><img src="{rids}" alt="Recognition of an International Dimension in Schools 2026–2029" loading="lazy"></button></div>
   <div class="reveal prose"><p class="eyebrow dark">RIDS 2025-26</p><h2>Recognition of an International Dimension in Schools</h2>
-    <p>DPS Visakhapatnam has been recognised by the British Council under the <strong>Recognition of an International Dimension in Schools (RIDS) 2026–2029</strong> — a mark of the school’s commitment to global citizenship.</p>
-    <p>Our International Policy: to encourage young minds to develop understanding, tolerance and appreciation of the diverse cultures of the world, and to nurture global citizens who play a responsible role for sustainable development in a changing world.</p></div>
+    <div data-md="rids_md"><p>DPS Visakhapatnam has been recognised by the British Council under the <strong>Recognition of an International Dimension in Schools (RIDS) 2026–2029</strong> — a mark of the school’s commitment to global citizenship.</p>
+    <p>Our International Policy: to encourage young minds to develop understanding, tolerance and appreciation of the diverse cultures of the world, and to nurture global citizens who play a responsible role for sustainable development in a changing world.</p></div></div>
 </div></section>'''
     return page('campus.html', 'Campus Life', 'Infrastructure, labs, library, house system, clubs, morning assembly, student council, discipline policy and RIDS recognition at DPS Visakhapatnam.', 'Campus Life', body)
 

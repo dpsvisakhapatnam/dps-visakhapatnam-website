@@ -1,0 +1,67 @@
+{
+  "withdrawal_md": "A clear calendar month's notice in writing or a month's fee in lieu of the notice must be given before the pupil can be withdrawn. Those who leave School in May must, in all cases, pay the fee for the month of June. Transfer Certificate is issued only when all the dues of the School are settled. Students can be asked to leave the School on the following grounds:\n\nDisciplinary\nUnsatisfactory progress\nRepeated detention in the class\n\nA child who fails twice in the same class will not be permitted to stay in the School. Where the withdrawal takes place due to the above reasons, the question of a month's notice or one month fee in lieu thereof does not arise.",
+  "steps": [
+    {
+      "when": "Dec – Jan",
+      "title": "Registration",
+      "text": "Names are registered from the second half of December to January."
+    },
+    {
+      "when": "Feb – Mar",
+      "title": "Test & interview",
+      "text": "Written test in English, Hindi and Maths. Nursery: meeting with teachers and Principal with parents."
+    },
+    {
+      "when": "After tests",
+      "title": "Selection list",
+      "text": "The list of selected candidates goes up on the School Notice Board."
+    },
+    {
+      "when": "April",
+      "title": "Session begins",
+      "text": "Orientation for new parents; school opens on the first working day of April."
+    }
+  ],
+  "faq": [
+    {
+      "question": "When does admission begin?",
+      "answer": "Names of those seeking admission are registered from the second half of December each year to January of the next year. Written tests and interviews are held in February/March, and the new session starts from the first working day of April."
+    },
+    {
+      "question": "Is there an entrance test?",
+      "answer": "A written test is conducted for English, Hindi and Mathematics. Children seeking admission to Nursery are instead called for a meeting with the concerned teachers and the Principal, along with their parents."
+    },
+    {
+      "question": "How will I know if my child is selected?",
+      "answer": "The final list of selected candidates is displayed on the School’s Notice Board. An orientation programme is conducted for all new parents."
+    },
+    {
+      "question": "Which board does the school follow?",
+      "answer": "The school prepares students for the All India Secondary School Examination and the All India Senior School Certificate Examination under the 10+2 scheme of the Central Board of Secondary Education (CBSE), New Delhi."
+    },
+    {
+      "question": "Which subject combinations are available in Classes XI–XII?",
+      "answer": "Science (Biology or Maths stream with English, Physics and Chemistry) and Commerce (English, Business Studies, Accountancy, Economics), with optional Physical Education, Informatics Practices and more. See the Academics page for the full table."
+    },
+    {
+      "question": "How do I withdraw my child?",
+      "answer": "A clear calendar month’s notice in writing, or a month’s fee in lieu of notice, is required. Those who leave in May must pay the fee for June. The Transfer Certificate is issued once all dues are settled."
+    },
+    {
+      "question": "How are fees paid?",
+      "answer": "Fees can be paid online through SBI Collect. The fee structure for 2026-27 is available on this page."
+    },
+    {
+      "question": "Is school uniform compulsory?",
+      "answer": "Yes. All students from Class I upwards must wear the prescribed uniform at school, during examinations and on organised tours. A tie is compulsory from Class III onwards."
+    },
+    {
+      "question": "Does the school provide transport?",
+      "answer": "Yes — transport is available through the school’s own and outsourced buses. Health and medical check-ups are done by the Visakhapatnam Steel General Hospital (VSGH)."
+    },
+    {
+      "question": "How is promotion decided?",
+      "answer": "Promotion is based on the whole year’s performance. For Classes II–VIII the final marks take 20% of weekly tests, 30% of the half-yearly and 50% of the annual examination into account."
+    }
+  ]
+}

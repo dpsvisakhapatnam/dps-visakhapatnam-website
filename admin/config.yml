@@ -428,3 +428,191 @@ collections:
             widget: list
             label_singular: "note"
             field: { label: "Note", name: note, widget: string }
+
+  # ------------------------------------------------------------------ page text & sections
+  - name: pages_home
+    label: "📝 Page text: Home"
+    description: "Texts and sections of the home page."
+    files:
+      - name: page_index
+        label: "Home page"
+        file: content/page-index.json
+        format: json
+        fields:
+          - { label: "Line above the main heading", name: hero_eyebrow, widget: string }
+          - { label: "Welcome sentence under the heading", name: hero_lead, widget: text }
+          - label: "Highlight numbers (green strip)"
+            name: stats
+            widget: list
+            label_singular: "highlight"
+            summary: "{{fields.number}} · {{fields.label}}"
+            fields:
+              - { label: "Number", name: number, widget: string, hint: "e.g. 100% or 13" }
+              - { label: "Label", name: label, widget: string }
+          - { label: "About the school (home page text)", name: about_md, widget: markdown }
+          - label: "“Why DPS” cards"
+            name: why
+            widget: list
+            label_singular: "card"
+            summary: "{{fields.title}}"
+            fields: &icon_card_fields
+              - { label: "Icon", name: icon, widget: select, options: [{ label: "Trophy", value: trophy }, { label: "Science flask", value: flask }, { label: "Computer", value: monitor }, { label: "Library", value: lib }, { label: "Running", value: run }, { label: "Arts palette", value: palette }, { label: "Globe", value: globe }, { label: "Heart", value: heart }, { label: "Book", value: book }, { label: "Graduation cap", value: cap }, { label: "People", value: users }, { label: "Shield", value: shield }, { label: "Music", value: music }, { label: "Bus", value: bus }, { label: "Sparkle", value: sparkle }], default: sparkle }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Text", name: text, widget: text }
+
+  - name: pages_about
+    label: "📝 Page text: About us"
+    description: "School introduction, philosophy, principal’s message, DPS Society and mentors."
+    files:
+      - name: page_about
+        label: "About page"
+        file: content/page-about.json
+        format: json
+        fields:
+          - { label: "School introduction", name: school_md, widget: markdown }
+          - label: "Motto, philosophy, aim cards"
+            name: pcards
+            widget: list
+            label_singular: "card"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: [{ label: "Heart", value: heart }, { label: "Graduation cap", value: cap }, { label: "Globe", value: globe }, { label: "Book", value: book }, { label: "Trophy", value: trophy }, { label: "People", value: users }], default: heart }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Text", name: body, widget: markdown }
+          - { label: "Principal’s quote (large text)", name: principal_quote, widget: text, hint: "Also shown on the home page." }
+          - { label: "Principal’s message (full text)", name: principal_md, widget: markdown }
+          - { label: "DPS Society text", name: society_md, widget: markdown }
+          - label: "Governing Body, DPS Society"
+            name: gov
+            widget: list
+            label_singular: "member"
+            summary: "{{fields.name}}"
+            fields: &mentor_fields
+              - { label: "Name", name: name, widget: string }
+              - { label: "Position", name: role, widget: string }
+              - { label: "Photo", name: photo, widget: image, allow_multiple: false, required: false }
+          - label: "School Managing Committee"
+            name: mc
+            widget: list
+            label_singular: "member"
+            summary: "{{fields.name}}"
+            fields: *mentor_fields
+
+  - name: pages_academics
+    label: "📝 Page text: Academics"
+    description: "Teaching methodology, courses, awards policy, calendars, important days and staff training."
+    files:
+      - name: page_academics
+        label: "Academics page"
+        file: content/page-academics.json
+        format: json
+        fields:
+          - { label: "Teaching methodology", name: methodology_md, widget: markdown }
+          - { label: "Courses offered & promotion policy", name: courses_md, widget: markdown, hint: "Tables are supported." }
+          - { label: "Awards & rewards policy", name: awards_md, widget: markdown, hint: "Tables are supported." }
+          - label: "Calendars (shown as tabs)"
+            name: calendars
+            widget: list
+            label_singular: "calendar"
+            summary: "{{fields.title}}"
+            hint: "Upload each calendar as an image (JPG or PNG). Add the newest first."
+            fields:
+              - { label: "Tab name", name: title, widget: string, hint: "e.g. School Calendar 2027-28" }
+              - { label: "Image", name: image, widget: image, allow_multiple: false }
+          - label: "Important days"
+            name: days
+            widget: list
+            label_singular: "day"
+            summary: "{{fields.month}}/{{fields.day}} · {{fields.title}}"
+            hint: "For a fixed date fill Month and Day. For something like ‘2nd Sunday of May’ fill Month, Which Sunday-number and Weekday instead."
+            fields:
+              - { label: "Name of the day", name: title, widget: string }
+              - { label: "Month (1-12)", name: month, widget: number, value_type: int, min: 1, max: 12 }
+              - { label: "Date (1-31) — for fixed dates", name: day, widget: number, value_type: int, min: 1, max: 31, required: false }
+              - { label: "Which one (1 = first … 4 = fourth) — for “Nth weekday” days", name: nth, widget: number, value_type: int, min: 1, max: 4, required: false }
+              - { label: "Weekday — for “Nth weekday” days", name: weekday, widget: select, required: false, options: [{ label: "Sunday", value: 0 }, { label: "Monday", value: 1 }, { label: "Tuesday", value: 2 }, { label: "Wednesday", value: 3 }, { label: "Thursday", value: 4 }, { label: "Friday", value: 5 }, { label: "Saturday", value: 6 }] }
+          - { label: "Student strength (image of the table)", name: strength_image, widget: image, allow_multiple: false }
+          - label: "Staff training records"
+            name: training
+            widget: list
+            label_singular: "record"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "e.g. Workshop details 2026-27" }
+              - { label: "PDF", name: file, widget: file }
+
+  - name: pages_admissions
+    label: "📝 Page text: Admissions"
+    description: "Admission steps, withdrawal policy and FAQs. (Fees and uniform have their own sections.)"
+    files:
+      - name: page_admissions
+        label: "Admissions page"
+        file: content/page-admissions.json
+        format: json
+        fields:
+          - label: "Admission steps (also shown on the home page)"
+            name: steps
+            widget: list
+            label_singular: "step"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "When", name: when, widget: string, hint: "e.g. Dec – Jan" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Details", name: text, widget: text }
+          - { label: "Withdrawal procedure", name: withdrawal_md, widget: markdown }
+          - label: "Frequently asked questions"
+            name: faq
+            widget: list
+            label_singular: "question"
+            summary: "{{fields.question}}"
+            fields:
+              - { label: "Question", name: question, widget: string }
+              - { label: "Answer", name: answer, widget: text }
+
+  - name: pages_campus
+    label: "📝 Page text: Campus life"
+    description: "Facilities, infrastructure, houses, clubs, assembly, council, discipline and RIDS."
+    files:
+      - name: page_campus
+        label: "Campus life page"
+        file: content/page-campus.json
+        format: json
+        fields:
+          - label: "Facility cards"
+            name: facilities
+            widget: list
+            label_singular: "facility"
+            summary: "{{fields.title}}"
+            fields: *icon_card_fields
+          - { label: "Infrastructure details (tables)", name: infra_md, widget: markdown, hint: "Tables are supported." }
+          - label: "Houses"
+            name: houses
+            widget: list
+            label_singular: "house"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "House name", name: name, widget: string }
+          - label: "Clubs & activities (Classes II to XII)"
+            name: clubs
+            widget: list
+            label_singular: "club"
+            field: { label: "Club", name: club, widget: string }
+          - label: "Additional activities (Classes VI onwards)"
+            name: extra_clubs
+            widget: list
+            label_singular: "activity"
+            field: { label: "Activity", name: activity, widget: string }
+          - { label: "Morning assembly", name: assembly_md, widget: markdown }
+          - { label: "Student council (introduction)", name: council_md, widget: text }
+          - label: "Discipline policy cards"
+            name: discipline
+            widget: list
+            label_singular: "card"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: title, widget: string, hint: "e.g. Yellow card" }
+              - { label: "Colour of the top border", name: color, widget: color, enableAlpha: false }
+              - { label: "Intro line", name: intro, widget: string, required: false }
+              - { label: "Points", name: items, widget: list, label_singular: "point", field: { label: "Point", name: point, widget: string } }
+              - { label: "Note", name: note, widget: string, required: false }
+          - { label: "RIDS recognition text", name: rids_md, widget: markdown }

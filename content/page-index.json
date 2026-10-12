@@ -1,0 +1,73 @@
+{
+  "hero_eyebrow": "Established 1991 · Under the aegis of the DPS Society, New Delhi",
+  "hero_lead": "For over three decades we have nurtured the body, mind, heart and soul of every child — so they can excel in academics and leave a legacy.",
+  "about_md": "Delhi Public School Visakhapatnam was established in 1991 and imparts quality education with the most modern teaching techniques, so its students can compete with the world. It provides a congenial atmosphere for the total development of the whole personality and its integration with society.\n\nThe school inculcates personal hygiene, neatness, cleanliness, graceful manners and discipline, in an environment that fosters a spirit of enquiry and keen competition — with personal attention to every child and a competent, supportive staff.",
+  "stats": [
+    {
+      "number": "1991",
+      "label": "Founded under the DPS Society, New Delhi"
+    },
+    {
+      "number": "13",
+      "label": "Acres of campus"
+    },
+    {
+      "number": "100%",
+      "label": "Board pass rate, five years running"
+    },
+    {
+      "number": "4",
+      "label": "Houses: Chenab, Ganges, Jhelum, Krishna"
+    },
+    {
+      "number": "59",
+      "label": "Teachers"
+    },
+    {
+      "number": "16+",
+      "label": "Clubs & activities"
+    }
+  ],
+  "why": [
+    {
+      "icon": "trophy",
+      "title": "Consistent academic excellence",
+      "text": "100% pass in Classes X and XII every year from 2020-21 to 2025-26, with toppers scoring 98.8% and 96.8%."
+    },
+    {
+      "icon": "flask",
+      "title": "Well-equipped laboratories",
+      "text": "Separate Physics, Chemistry, Biology, Maths and Computer Science labs for hands-on learning."
+    },
+    {
+      "icon": "monitor",
+      "title": "Digital classrooms",
+      "text": "Technology and automation built into the school system, equipping students with 21st-century skills."
+    },
+    {
+      "icon": "lib",
+      "title": "A library that is always growing",
+      "text": "Over 6,000 reference books, 12 magazines, 4 periodicals and 5 dailies — replenished regularly."
+    },
+    {
+      "icon": "run",
+      "title": "Sprawling playground",
+      "text": "More than 32,000 sq. m of playground, indoor games, and a full calendar of sports and Inter-House events."
+    },
+    {
+      "icon": "palette",
+      "title": "Arts, music & dance",
+      "text": "Dedicated music and dance rooms, art and painting, dramatics, creative writing and public speaking."
+    },
+    {
+      "icon": "globe",
+      "title": "International dimension",
+      "text": "Recognised by the British Council for an International Dimension in Schools (2026–2029)."
+    },
+    {
+      "icon": "heart",
+      "title": "Character first",
+      "text": "Service before Self: assemblies, house system, scholar awards and a clear, fair discipline policy."
+    }
+  ]
+}
