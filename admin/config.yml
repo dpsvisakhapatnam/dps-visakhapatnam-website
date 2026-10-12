@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/dps-visakhapatnam-website
+  repo: dpsvisakhapatnam/dps-visakhapatnam-website
   branch: main
   commit_messages:
     create: "Add {{collection}} “{{slug}}”"
