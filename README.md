@@ -17,3 +17,6 @@ Pages are generated from `site-src/` (Python + Pillow):
 - `orig/` and `crawl/` — snapshot of the old site (images, PDFs, HTML) used as the source of truth; safe to delete after launch to save ~300 MB
 
 Before launch: replace `https://example.org/` in `site-src/build.py` with the real domain (sitemap/robots).
+
+## School-editable content (/admin)
+Circulars, assignments, syllabus, book list, magazine, news, board results, gallery and the notice bar live in `content/*.json` and are edited by the school at `/admin` (Decap CMS). `build.py` only *seeds* these files if they are missing — it never overwrites them. See `~/dps-visakhapatnam-website-guides/` for the one-time setup and the school office guide.
