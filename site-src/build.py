@@ -43,7 +43,7 @@ seed_pages.run()
 from layout import ICON
 json.dump(ICON, open(os.path.join(ROOT, 'assets', 'icons.json'), 'w'), separators=(',', ':'))
 json.dump(index, open(os.path.join(ROOT, 'assets', 'search.json'), 'w'), separators=(',', ':'), ensure_ascii=False)
-base = 'https://example.org/'
+base = 'https://dpsvisakhapatnam.netlify.app/'
 urls = ''.join(f'<url><loc>{base}{fn if fn != "index.html" else ""}</loc></url>' for fn in PAGES if fn != '404.html')
 open(os.path.join(ROOT, 'sitemap.xml'), 'w').write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>')
 open(os.path.join(ROOT, 'robots.txt'), 'w').write('User-agent: *\nAllow: /\nSitemap: ' + base + 'sitemap.xml\n')

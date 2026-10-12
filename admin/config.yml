@@ -15,8 +15,8 @@ backend:
 local_backend: true        # lets the developer test at http://localhost:5173/admin (ignored on the live site)
 media_folder: "uploads"
 public_folder: "/uploads"
-site_url: https://example.org
-display_url: https://example.org
+site_url: https://dpsvisakhapatnam.netlify.app
+display_url: https://dpsvisakhapatnam.netlify.app
 logo_url: /assets/dpslogo.png
 locale: en
 slug:
