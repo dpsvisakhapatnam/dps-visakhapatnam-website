@@ -1,0 +1,158 @@
+{
+  "items": [
+    {
+      "image": "assets/gallery/g1.jpg",
+      "caption": "International Yoga Day",
+      "category": "sports",
+      "wide": true,
+      "alt": "Students and staff pose with International Yoga Day banners"
+    },
+    {
+      "image": "assets/gallery/g9.jpg",
+      "caption": "Investiture Ceremony",
+      "category": "ceremony",
+      "wide": false,
+      "alt": "House captains and prefects at the Investiture Ceremony"
+    },
+    {
+      "image": "assets/gallery/g7.jpg",
+      "caption": "Annual celebrations",
+      "category": "culture",
+      "wide": false,
+      "alt": "Students perform a folk dance in red costumes"
+    },
+    {
+      "image": "assets/gallery/g18.jpg",
+      "caption": "Annual Sports Day",
+      "category": "sports",
+      "wide": false,
+      "alt": "Students form a human pyramid on Sports Day"
+    },
+    {
+      "image": "assets/gallery/g5.jpg",
+      "caption": "Annual celebrations",
+      "category": "culture",
+      "wide": true,
+      "alt": "A large group of performers in traditional dress"
+    },
+    {
+      "image": "assets/gallery/g12.jpg",
+      "caption": "Annual Awards & Investiture",
+      "category": "ceremony",
+      "wide": false,
+      "alt": "Award winners with guests of honour"
+    },
+    {
+      "image": "assets/gallery/g19.jpg",
+      "caption": "Annual Sports Day",
+      "category": "sports",
+      "wide": false,
+      "alt": "Children with colourful umbrellas on the field"
+    },
+    {
+      "image": "assets/gallery/g10.jpg",
+      "caption": "Annual celebrations",
+      "category": "culture",
+      "wide": false,
+      "alt": "Children in traditional outfits on stage"
+    },
+    {
+      "image": "assets/gallery/g17.jpg",
+      "caption": "23rd Annual Sports Day",
+      "category": "sports",
+      "wide": false,
+      "alt": "Sports Day podium with medal winners"
+    },
+    {
+      "image": "assets/gallery/g13.jpg",
+      "caption": "Annual celebrations",
+      "category": "culture",
+      "wide": false,
+      "alt": "Students in colourful costumes on stage"
+    },
+    {
+      "image": "assets/gallery/g4.jpg",
+      "caption": "Scholar Badge presentation",
+      "category": "ceremony",
+      "wide": false,
+      "alt": "Students holding certificates with teachers"
+    },
+    {
+      "image": "assets/gallery/g14.jpg",
+      "caption": "March past",
+      "category": "sports",
+      "wide": false,
+      "alt": "March past with a house flag"
+    },
+    {
+      "image": "assets/gallery/g21.jpg",
+      "caption": "Pedda Panduga Celebrations",
+      "category": "culture",
+      "wide": true,
+      "alt": "Guests and students at Pedda Panduga celebrations"
+    },
+    {
+      "image": "assets/gallery/g16.jpg",
+      "caption": "Grandparents’ Day",
+      "category": "culture",
+      "wide": false,
+      "alt": "Children light a lamp at Grandparents’ Day"
+    },
+    {
+      "image": "assets/gallery/g3.jpg",
+      "caption": "Yoga session",
+      "category": "sports",
+      "wide": false,
+      "alt": "Students seated for a yoga session"
+    },
+    {
+      "image": "assets/gallery/g22.jpg",
+      "caption": "Annual Sports Day",
+      "category": "ceremony",
+      "wide": false,
+      "alt": "Young athletes with certificates on the field"
+    },
+    {
+      "image": "assets/gallery/g8.jpg",
+      "caption": "Investiture Ceremony",
+      "category": "ceremony",
+      "wide": false,
+      "alt": "Chief guests present a memento at the Investiture Ceremony"
+    },
+    {
+      "image": "assets/gallery/g6.jpg",
+      "caption": "Annual celebrations",
+      "category": "culture",
+      "wide": false,
+      "alt": "Performers in colourful traditional costume"
+    },
+    {
+      "image": "assets/gallery/g11.jpg",
+      "caption": "Grandparents’ Day",
+      "category": "culture",
+      "wide": false,
+      "alt": "Children in pastel outfits on stage"
+    },
+    {
+      "image": "assets/gallery/g15.jpg",
+      "caption": "Scholar Badge presentation",
+      "category": "ceremony",
+      "wide": false,
+      "alt": "Students in blazers on the field"
+    },
+    {
+      "image": "assets/gallery/g20.jpg",
+      "caption": "Pedda Panduga Celebrations",
+      "category": "ceremony",
+      "wide": false,
+      "alt": "Guests receive mementos on stage"
+    },
+    {
+      "image": "assets/gallery/g2.jpg",
+      "caption": "Workshop",
+      "category": "ceremony",
+      "wide": false,
+      "alt": "A speaker addresses a gathering in the hall"
+    }
+  ]
+}

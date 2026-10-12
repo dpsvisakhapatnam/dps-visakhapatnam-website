@@ -1,0 +1,215 @@
+# Website editor for Delhi Public School Visakhapatnam Steel Plant.
+# Setup notes are in SETUP.md. Only change `repo` below (see step 2 there).
+
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/dps-visakhapatnam-website
+  branch: main
+  commit_messages:
+    create: "Add {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Remove {{collection}} “{{slug}}”"
+    uploadMedia: "Upload {{path}}"
+    deleteMedia: "Delete {{path}}"
+
+local_backend: true        # lets the developer test at http://localhost:5173/admin (ignored on the live site)
+media_folder: "uploads"
+public_folder: "/uploads"
+site_url: https://example.org
+display_url: https://example.org
+logo_url: /assets/dpslogo.png
+locale: en
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: notices
+    label: "📢 Notice bar (top of every page)"
+    description: "The short scrolling messages shown in the green bar at the very top of the website."
+    files:
+      - name: notices
+        label: "Notice bar messages"
+        file: content/notices.json
+        format: json
+        fields:
+          - label: "Messages"
+            label_singular: "message"
+            name: items
+            widget: list
+            summary: "{{fields.text}}"
+            hint: "Keep each message short. The first ones appear first. Delete a message to remove it."
+            fields:
+              - { label: "Message", name: text, widget: string }
+              - { label: "Link", name: link, widget: string, required: false, hint: "A page like news.html or resources.html#assignments, or a full web address starting with https://" }
+
+  - name: circulars
+    label: "📄 Circulars"
+    description: "Notices for parents and students. Newest dated circular shows first."
+    files:
+      - name: circulars
+        label: "All circulars"
+        file: content/circulars.json
+        format: json
+        fields:
+          - label: "Circulars"
+            label_singular: "circular"
+            name: items
+            widget: list
+            summary: "{{fields.date}} · {{fields.title}}"
+            hint: "Click “Add circular”, type a title, pick the date and upload the PDF."
+            add_to_top: true
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Date", name: date, widget: datetime, date_format: "DD MMM YYYY", time_format: false, format: "YYYY-MM-DD", required: false }
+              - { label: "PDF or image file", name: file, widget: file }
+
+  - name: school_documents
+    label: "📚 Assignments, syllabus & books"
+    description: "Class-wise downloads for students and parents."
+    files:
+      - name: assignments
+        label: "Assignments"
+        file: content/assignments.json
+        format: json
+        fields:
+          - { label: "Section heading", name: heading, widget: string, default: "Assignments for all classes" }
+          - { label: "Short note under the heading", name: note, widget: text, required: false }
+          - label: "Class assignments"
+            label_singular: "class"
+            name: items
+            widget: list
+            summary: "{{fields.label}}"
+            hint: "To replace a class’s PDF, open that class and upload a new file. To add a class, click “Add class”."
+            fields:
+              - { label: "Class (as shown on the button)", name: label, widget: string, hint: "e.g. Class 7 or Class 12 Science" }
+              - { label: "PDF file", name: file, widget: file }
+      - name: syllabus
+        label: "Syllabus break-up"
+        file: content/syllabus.json
+        format: json
+        fields:
+          - { label: "Section heading", name: heading, widget: string, default: "Syllabus for all classes" }
+          - { label: "Short note under the heading", name: note, widget: text, required: false }
+          - label: "Class syllabus"
+            label_singular: "class"
+            name: items
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Class", name: label, widget: string }
+              - { label: "PDF file", name: file, widget: file }
+      - name: booklist
+        label: "Book list"
+        file: content/booklist.json
+        format: json
+        fields:
+          - { label: "Title", name: title, widget: string, hint: "e.g. Book list — academic year 2027-28" }
+          - { label: "PDF file", name: file, widget: file }
+      - name: magazine
+        label: "School magazine"
+        file: content/magazine.json
+        format: json
+        fields:
+          - { label: "Magazine name", name: title, widget: string }
+          - { label: "Subtitle (year / edition)", name: subtitle, widget: string, required: false }
+          - { label: "PDF file", name: file, widget: file }
+
+  - name: news_results
+    label: "🏆 News, achievements & results"
+    description: "Stories on the News page and the home page, and the board results section."
+    files:
+      - name: news
+        label: "News & achievements"
+        file: content/news.json
+        format: json
+        fields:
+          - label: "News items"
+            label_singular: "news item"
+            name: items
+            widget: list
+            summary: "{{fields.date}} · {{fields.title}}"
+            add_to_top: true
+            hint: "Newest dated item shows first. Items without a date appear after dated ones."
+            fields:
+              - { label: "Headline", name: title, widget: string }
+              - { label: "Type", name: category, widget: select, options: ["Achievement", "News", "Event", "Announcement"], default: "News" }
+              - { label: "Date", name: date, widget: datetime, date_format: "DD MMM YYYY", time_format: false, format: "YYYY-MM-DD", required: false }
+              - { label: "Short description", name: summary, widget: text, required: false }
+              - { label: "Photo or poster", name: image, widget: image, allow_multiple: false, required: false, hint: "Keep photos under about 2 MB." }
+              - { label: "Link", name: link, widget: string, required: false }
+      - name: results
+        label: "Board results (home page)"
+        file: content/results.json
+        format: json
+        fields:
+          - { label: "Session", name: session, widget: string, hint: "e.g. 2025–26" }
+          - { label: "Line under the heading", name: tagline, widget: string, required: false }
+          - label: "Class X"
+            name: classX
+            widget: object
+            fields:
+              - { label: "Topper’s percentage", name: percent, widget: string, hint: "Numbers only, e.g. 98.8" }
+              - { label: "Topper’s name", name: name, widget: string }
+              - { label: "Class average", name: average, widget: string }
+              - { label: "Students appeared", name: appeared, widget: string }
+              - { label: "Students passed", name: passed, widget: string }
+              - { label: "Result poster (optional)", name: poster, widget: image, allow_multiple: false, required: false }
+          - label: "Class XII"
+            name: classXII
+            widget: object
+            fields:
+              - { label: "Topper’s percentage", name: percent, widget: string }
+              - { label: "Topper’s name", name: name, widget: string }
+              - { label: "Class average", name: average, widget: string }
+              - { label: "Students appeared", name: appeared, widget: string }
+              - { label: "Students passed", name: passed, widget: string }
+              - { label: "Result poster (optional)", name: poster, widget: image, allow_multiple: false, required: false }
+          - { label: "Chart title", name: chart_title, widget: string, required: false }
+          - label: "Chart: Class X average by year"
+            label_singular: "year"
+            name: chart
+            widget: list
+            summary: "{{fields.year}} · {{fields.average}}"
+            fields:
+              - { label: "Year", name: year, widget: string, hint: "e.g. 2026-27" }
+              - { label: "Class average (%)", name: average, widget: string }
+
+  - name: photos
+    label: "🖼️ Photo gallery"
+    description: "Photos shown on the home page and the Gallery page."
+    files:
+      - name: gallery
+        label: "Latest activities (photos)"
+        file: content/gallery.json
+        format: json
+        fields:
+          - label: "Photos"
+            name: items
+            label_singular: "photo"
+
+            widget: list
+            summary: "{{fields.caption}}"
+            add_to_top: true
+            hint: "New photos go to the top. The home page shows the first 16. Please keep each photo under about 2 MB."
+            fields:
+              - { label: "Photo", name: image, widget: image, allow_multiple: false }
+              - { label: "Caption", name: caption, widget: string }
+              - { label: "Group", name: category, widget: select, options: [{ label: "Ceremonies", value: ceremony }, { label: "Culture", value: culture }, { label: "Sports & wellness", value: sports }], default: culture }
+              - { label: "Show larger (double width)", name: wide, widget: boolean, default: false, required: false }
+              - { label: "Short description for accessibility (optional)", name: alt, widget: string, required: false }
+      - name: albums
+        label: "Event albums"
+        file: content/albums.json
+        format: json
+        fields:
+          - label: "Albums"
+            label_singular: "album"
+            name: items
+            widget: list
+            summary: "{{fields.title}}"
+            add_to_top: true
+            fields:
+              - { label: "Album name", name: title, widget: string, hint: "e.g. Annual Day 2026" }
+              - { label: "Year", name: year, widget: string, required: false, hint: "e.g. 2026-27" }
+              - { label: "Photos (the first one is the cover)", name: photos, widget: image, allow_multiple: true, hint: "You can pick several photos at once." }

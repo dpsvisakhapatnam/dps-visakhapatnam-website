@@ -1,0 +1,47 @@
+{
+  "session": "2025–26",
+  "tagline": "Consistently setting benchmarks in academic excellence.",
+  "classX": {
+    "percent": "98.8",
+    "name": "Cheruku Anvith Raj",
+    "average": "86.2",
+    "appeared": "158",
+    "passed": "158",
+    "poster": "assets/img/result-class-x-2025-26.jpg"
+  },
+  "classXII": {
+    "percent": "96.8",
+    "name": "Bikash Kumar Barik",
+    "average": "80.5",
+    "appeared": "17",
+    "passed": "17",
+    "poster": "assets/img/result-class-xii-2025-26.jpg"
+  },
+  "chart_title": "Class X average, last six years",
+  "chart": [
+    {
+      "year": "2020-21",
+      "average": "83.0"
+    },
+    {
+      "year": "2021-22",
+      "average": "85.1"
+    },
+    {
+      "year": "2022-23",
+      "average": "78.3"
+    },
+    {
+      "year": "2023-24",
+      "average": "83.7"
+    },
+    {
+      "year": "2024-25",
+      "average": "85.2"
+    },
+    {
+      "year": "2025-26",
+      "average": "86.2"
+    }
+  ]
+}
