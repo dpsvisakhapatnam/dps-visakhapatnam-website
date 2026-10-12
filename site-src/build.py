@@ -38,8 +38,6 @@ for fn, builder in PAGES.items():
         key = (m.group(1))
         if key in seen: continue
         seen.add(key); index.append({'t': text_of(m.group(2)), 'u': m.group(1), 'd': text_of(m.group(3)), 'k': 'Download'})
-    for m in re.finditer(r'<article class="person" data-name="([^"]*)"[^>]*>.*?<b>(.*?)</b><span class="role">(.*?)</span>', h, flags=re.S):
-        index.append({'t': text_of(m.group(2)), 'u': fn + '#teachers', 'd': text_of(m.group(3)) + ' · Faculty & Staff', 'k': 'Person'})
 json.dump(index, open(os.path.join(ROOT, 'assets', 'search.json'), 'w'), separators=(',', ':'), ensure_ascii=False)
 base = 'https://example.org/'
 urls = ''.join(f'<url><loc>{base}{fn if fn != "index.html" else ""}</loc></url>' for fn in PAGES if fn != '404.html')

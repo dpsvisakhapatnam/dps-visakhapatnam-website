@@ -1,0 +1,149 @@
+{
+  "session": "Session 2026-27",
+  "col1": "VSP (₹)",
+  "col2": "NVSP (₹)",
+  "groups": [
+    {
+      "heading": "One-time fees (payable once, at admission)",
+      "rows": [
+        {
+          "item": "Admission fee",
+          "vsp": "9,680",
+          "nvsp": "14,210"
+        },
+        {
+          "item": "Development fee",
+          "vsp": "6,710",
+          "nvsp": "13,210"
+        },
+        {
+          "item": "Caution money (refundable)",
+          "vsp": "5,000",
+          "nvsp": "6,000"
+        }
+      ]
+    },
+    {
+      "heading": "Annual fee (per year, at the start of the session)",
+      "rows": [
+        {
+          "item": "Balvatika II & III",
+          "vsp": "1,760",
+          "nvsp": "1,910"
+        },
+        {
+          "item": "Class I & II",
+          "vsp": "1,760",
+          "nvsp": "2,020"
+        },
+        {
+          "item": "Class III to V",
+          "vsp": "2,420",
+          "nvsp": "3,280"
+        },
+        {
+          "item": "Class VI to VIII",
+          "vsp": "3,080",
+          "nvsp": "4,180"
+        },
+        {
+          "item": "Class IX & X",
+          "vsp": "3,300",
+          "nvsp": "4,510"
+        },
+        {
+          "item": "Class XI & XII",
+          "vsp": "7,260",
+          "nvsp": "9,460"
+        },
+        {
+          "item": "Almanac, magazine, ID card, group photo",
+          "vsp": "700",
+          "nvsp": "755"
+        },
+        {
+          "item": "Management fund (at admission, then yearly)",
+          "vsp": "1,210",
+          "nvsp": "1,300"
+        },
+        {
+          "item": "Workshop, tours, seminars",
+          "vsp": "390",
+          "nvsp": "420"
+        }
+      ]
+    },
+    {
+      "heading": "Tuition fee (per month)",
+      "rows": [
+        {
+          "item": "Balvatika II & III",
+          "vsp": "2,035",
+          "nvsp": "2,835"
+        },
+        {
+          "item": "Class I & II",
+          "vsp": "2,620",
+          "nvsp": "3,720"
+        },
+        {
+          "item": "Class III to V",
+          "vsp": "2,970",
+          "nvsp": "4,070"
+        },
+        {
+          "item": "Class VI to VIII",
+          "vsp": "3,315",
+          "nvsp": "4,415"
+        },
+        {
+          "item": "Class IX & X",
+          "vsp": "3,500",
+          "nvsp": "4,600"
+        },
+        {
+          "item": "Class XI & XII",
+          "vsp": "3,620",
+          "nvsp": "5,010"
+        }
+      ]
+    },
+    {
+      "heading": "Other monthly fees (payable quarterly)",
+      "rows": [
+        {
+          "item": "Activity & assignment fee (per month)",
+          "vsp": "320",
+          "nvsp": "345"
+        },
+        {
+          "item": "Smart class fee (per month)",
+          "vsp": "180",
+          "nvsp": "195"
+        },
+        {
+          "item": "Computer fee (per month)",
+          "vsp": "185",
+          "nvsp": "200"
+        }
+      ]
+    },
+    {
+      "heading": "Bus fee (per year, optional, payable yearly)",
+      "rows": [
+        {
+          "item": "Stage 1: Old Gajuwaka, KPLM",
+          "vsp": "24,750",
+          "nvsp": "24,750"
+        },
+        {
+          "item": "Stage 2: Muralinagar, NAD, Sheela Nagar, BHPV, Auto Nagar, New Gajuwaka",
+          "vsp": "29,700",
+          "nvsp": "29,700"
+        }
+      ]
+    }
+  ],
+  "note": "Transcribed from the official fee structure dated 16-02-2026 (VSP / NVSP columns as published by the school). The signed document is the authority — see the scan alongside. Items marked “at admission” are payable once; annual fees every year at the start of the session; monthly heads are payable quarterly.",
+  "scan": "docs/fee-structure-2026-27.jpg"
+}

@@ -52,6 +52,28 @@ def run():
         'chart': [{'year': '2020-21', 'average': '83.0'}, {'year': '2021-22', 'average': '85.1'}, {'year': '2022-23', 'average': '78.3'},
                   {'year': '2023-24', 'average': '83.7'}, {'year': '2024-25', 'average': '85.2'}, {'year': '2025-26', 'average': '86.2'}]})
 
+    from data import parse_staff, staff_photo
+    from pages_a import FEE_ROWS
+    st = parse_staff()
+    def person(x):
+        d = {'name': x['name'], 'role': x['role'], 'qualification': x['qual'] if x['qual'] != '-' else '', 'joined': x['joined']}
+        ph = staff_photo(x)
+        if ph:
+            d['photo'] = ph
+        return d
+    lead = [x for x in st['teachers'] if x['role'].lower().startswith('co-ordinator')]
+    write('staff', {'leadership': [person(x) for x in st['admin'] + lead], 'teachers': [person(x) for x in st['teachers'] if x not in lead],
+                    'office': [person(x) for x in st['office']], 'support': [person(x) for x in st['support']]})
+    groups = []
+    for r in FEE_ROWS:
+        if r[0] == 'h':
+            groups.append({'heading': r[1], 'rows': []})
+        else:
+            groups[-1]['rows'].append({'item': r[1], 'vsp': f'{r[2]:,}', 'nvsp': f'{r[3]:,}'})
+    write('fees', {'session': 'Session 2026-27', 'col1': 'VSP (₹)', 'col2': 'NVSP (₹)', 'groups': groups,
+                   'note': 'Transcribed from the official fee structure dated 16-02-2026 (VSP / NVSP columns as published by the school). The signed document is the authority — see the scan alongside. Items marked “at admission” are payable once; annual fees every year at the start of the session; monthly heads are payable quarterly.',
+                   'scan': doc('docs/Fee Structure 2026-27.jpeg')})
+
     gal = []
     for c, cap, g, alt, wide in GAL + EXTRA_GAL:
         gal.append({'image': f'assets/gallery/{g}.jpg', 'caption': cap, 'category': c, 'wide': wide, 'alt': alt})

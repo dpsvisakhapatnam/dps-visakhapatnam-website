@@ -213,3 +213,77 @@ collections:
               - { label: "Album name", name: title, widget: string, hint: "e.g. Annual Day 2026" }
               - { label: "Year", name: year, widget: string, required: false, hint: "e.g. 2026-27" }
               - { label: "Photos (the first one is the cover)", name: photos, widget: image, allow_multiple: true, hint: "You can pick several photos at once." }
+
+  - name: people
+    label: "👥 Faculty & staff"
+    description: "The people shown on the Faculty & Staff page."
+    files:
+      - name: staff
+        label: "Faculty & staff"
+        file: content/staff.json
+        format: json
+        fields:
+          - label: "School leadership (Principal and coordinators)"
+            name: leadership
+            widget: list
+            label_singular: "person"
+            summary: "{{fields.name}} · {{fields.role}}"
+            hint: "Shown first on the page, in this order. Drag to reorder."
+            fields: &person_fields
+              - { label: "Name", name: name, widget: string }
+              - { label: "Designation", name: role, widget: string, hint: "e.g. PGT, TGT, PRT, Principal, UDC, Watchman" }
+              - { label: "Qualification", name: qualification, widget: string, required: false }
+              - { label: "Date of joining", name: joined, widget: string, required: false, hint: "e.g. 12-06-2024" }
+              - { label: "Photo", name: photo, widget: image, allow_multiple: false, required: false, hint: "A head-and-shoulders photo works best. Without a photo, initials are shown." }
+          - label: "Teachers"
+            name: teachers
+            widget: list
+            label_singular: "teacher"
+            summary: "{{fields.name}} · {{fields.role}}"
+            add_to_top: true
+            hint: "New teachers appear at the top of this list. To remove a teacher who has left, click the × on their row."
+            fields: *person_fields
+          - label: "Office staff"
+            name: office
+            widget: list
+            label_singular: "person"
+            summary: "{{fields.name}} · {{fields.role}}"
+            fields: *person_fields
+          - label: "Support staff"
+            name: support
+            widget: list
+            label_singular: "person"
+            summary: "{{fields.name}} · {{fields.role}}"
+            fields: *person_fields
+
+  - name: fees_collection
+    label: "💰 Fee structure"
+    description: "The fee table and the scan on the Admissions page."
+    files:
+      - name: fees
+        label: "Fee structure"
+        file: content/fees.json
+        format: json
+        fields:
+          - { label: "Heading above the table", name: session, widget: string, hint: "e.g. Session 2027-28" }
+          - { label: "Name of first fee column", name: col1, widget: string, hint: "e.g. VSP (₹)" }
+          - { label: "Name of second fee column", name: col2, widget: string, hint: "e.g. NVSP (₹)" }
+          - label: "Fee groups"
+            name: groups
+            widget: list
+            label_singular: "fee group"
+            summary: "{{fields.heading}}"
+            hint: "Each group has a heading (e.g. Tuition fee, per month) and rows of fees."
+            fields:
+              - { label: "Group heading", name: heading, widget: string }
+              - label: "Fees"
+                name: rows
+                widget: list
+                label_singular: "fee"
+                summary: "{{fields.item}} · {{fields.vsp}} / {{fields.nvsp}}"
+                fields:
+                  - { label: "Fee head", name: item, widget: string, hint: "e.g. Class III to V" }
+                  - { label: "Amount, first column", name: vsp, widget: string, hint: "Type numbers as you want them shown, e.g. 2,970" }
+                  - { label: "Amount, second column", name: nvsp, widget: string }
+          - { label: "Note under the table", name: note, widget: text, required: false }
+          - { label: "Official scan (image) of the signed fee structure", name: scan, widget: image, allow_multiple: false, required: false, hint: "Upload a clear photo or scan. It is shown beside the table and can be downloaded." }

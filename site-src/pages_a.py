@@ -116,10 +116,10 @@ def build_staff():
         ('leadership', 'Leadership'), ('teachers', 'Teachers'), ('office', 'Office staff'), ('support', 'Support staff')]) + f'''
 <section class="section" id="leadership"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Administration</p><h2>School leadership</h2></div>
-  <div class="staff-grid reveal">{''.join(person_card(p) for p in st['admin'] + lead)}</div>
+  <div class="staff-grid" id="staffLead">{''.join(person_card(p) for p in st['admin'] + lead)}</div>
 </div></section>
 <section class="section alt" id="teachers"><div class="wrap">
-  <div class="section-head reveal"><p class="eyebrow dark">{len(teachers)} teachers</p><h2>Our teachers</h2><p>PGT: Post Graduate Teacher · TGT: Trained Graduate Teacher · PRT (Pr T): Primary Teacher. All listed teachers are trained.</p></div>
+  <div class="section-head reveal"><p class="eyebrow dark" id="teacherCount">{len(teachers)} teachers</p><h2>Our teachers</h2><p>PGT: Post Graduate Teacher · TGT: Trained Graduate Teacher · PRT (Pr T): Primary Teacher. All listed teachers are trained.</p></div>
   <div class="table-tools reveal"><input type="search" id="staffQ" placeholder="Search by name, subject or qualification…" aria-label="Search teachers"></div>
   <div class="filters reveal" id="roleF">{chips}</div>
   <div class="staff-grid" id="staffGrid">{''.join(person_card(p) for p in teachers)}</div>
@@ -127,11 +127,11 @@ def build_staff():
 </div></section>
 <section class="section" id="office"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Administration support</p><h2>Office staff</h2></div>
-  <div class="staff-grid reveal">{''.join(person_card(p) for p in st['office'])}</div>
+  <div class="staff-grid" id="staffOffice">{''.join(person_card(p) for p in st['office'])}</div>
 </div></section>
 <section class="section alt" id="support"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Keeping the campus running</p><h2>Support staff</h2></div>
-  <div class="staff-grid reveal">{''.join(person_card(p) for p in st['support'])}</div>
+  <div class="staff-grid" id="staffSupport">{''.join(person_card(p) for p in st['support'])}</div>
 </div></section>'''
     return page('staff.html', 'Faculty & Staff', 'Meet the principal, coordinators, teachers and staff of Delhi Public School Visakhapatnam.', 'About', body)
 
@@ -245,11 +245,11 @@ def build_admissions():
 </div></section>
 
 <section class="section alt" id="fees"><div class="wrap">
-  <div class="section-head reveal"><p class="eyebrow dark">Session 2026-27</p><h2>Fee structure</h2><p>Official fee structure as issued by the school. Click to enlarge or download.</p></div>
+  <div class="section-head reveal"><p class="eyebrow dark" id="feeSession">Session 2026-27</p><h2>Fee structure</h2><p>Official fee structure as issued by the school. Click to enlarge or download.</p></div>
   <div class="split top">
-    <div class="reveal">{fee_table()}<p class="note" style="margin-top:12px">Transcribed from the official fee structure dated 16-02-2026 (VSP / NVSP columns as published by the school). The signed document is the authority — see the scan alongside. Items marked “at admission” are payable once; annual fees every year at the start of the session; monthly heads are payable quarterly.</p></div>
-    <div class="reveal">{docimg('docs/Fee Structure 2026-27.jpeg', 'Fee structure 2026-27 (official scan)')}
-      <div class="card" style="margin-top:16px"><div class="ico">{ICON['rupee']}</div><h3>Pay fees online</h3><p>Pay securely through SBI Collect. For clarifications call the school office on {PHONE}.</p><p style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-green" href="{FEES}" target="_blank" rel="noopener">Pay school fees →</a> <a class="btn btn-line btn-sm" href="{fee_url}" download>Download scan</a></p></div></div>
+    <div class="reveal"><div id="feeTable">{fee_table()}</div><p class="note" id="feeNote" style="margin-top:12px">Transcribed from the official fee structure dated 16-02-2026 (VSP / NVSP columns as published by the school). The signed document is the authority — see the scan alongside. Items marked “at admission” are payable once; annual fees every year at the start of the session; monthly heads are payable quarterly.</p></div>
+    <div class="reveal"><div id="feeScan">{docimg('docs/Fee Structure 2026-27.jpeg', 'Fee structure 2026-27 (official scan)')}</div>
+      <div class="card" style="margin-top:16px"><div class="ico">{ICON['rupee']}</div><h3>Pay fees online</h3><p>Pay securely through SBI Collect. For clarifications call the school office on {PHONE}.</p><p style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-green" href="{FEES}" target="_blank" rel="noopener">Pay school fees →</a> <a id="feeDl" class="btn btn-line btn-sm" href="{fee_url}" download>Download scan</a></p></div></div>
   </div>
 </div></section>
 

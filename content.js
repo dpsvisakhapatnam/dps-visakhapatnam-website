@@ -75,6 +75,35 @@
       (ch.length ? `<div class="chart" style="margin-top:24px"><h3>${esc(r.chart_title || 'Results over the years')}</h3><p class="note" style="margin:0">Percent.</p><div class="bars" data-bars>${ch.map(c => `<div class="bar-col"><b>${esc(c.average)}</b><i style="--h:${Math.min(100, parseFloat(c.average) || 0)}%"></i></div>`).join('')}</div><div class="bar-labels">${ch.map(c => `<span>${esc(c.year)}</span>`).join('')}</div></div>` : '');
   });
 
+  /* staff */
+  const initials = n => { const w = String(n).replace(/^(Dr\.?|Mr\.?|Mrs\.?|Ms\.?|Smt\.?|Shri)\s+/i, '').split(/\s+/).filter(Boolean); return ((w[0] || '?')[0] + (w.length > 1 ? w[w.length - 1][0] : '')).toUpperCase(); };
+  const person = p => {
+    const media = p.photo ? imgTag(p.photo, 360, p.name) : `<div class="ph">${esc(initials(p.name))}</div>`;
+    return `<article class="person" data-name="${esc([p.name, p.role, p.qualification].join(' ').toLowerCase())}" data-role="${esc(String(p.role || '').toUpperCase())}">${media}<div><b>${esc(p.name)}</b><span class="role">${esc(p.role)}</span>${p.qualification ? `<span>${esc(p.qualification)}</span>` : ''}${p.joined ? `<span>Joined ${esc(p.joined)}</span>` : ''}</div></article>`;
+  };
+  job('#staffGrid', ['staff'], s => {
+    if (!s) return;
+    const fill = (id, arr) => { if ($(id) && arr && arr.length) $(id).innerHTML = arr.map(person).join(''); };
+    fill('#staffLead', s.leadership); fill('#staffGrid', s.teachers); fill('#staffOffice', s.office); fill('#staffSupport', s.support);
+    const t = s.teachers || [];
+    if ($('#teacherCount')) $('#teacherCount').textContent = t.length + ' teachers';
+    const roles = [...new Set(t.map(x => String(x.role || '').toUpperCase()).filter(Boolean))].sort();
+    if ($('#roleF')) $('#roleF').innerHTML = '<button class="chip on" data-role="">All</button>' + roles.map(r => `<button class="chip" data-role="${esc(r)}">${esc(r)}</button>`).join('');
+  });
+
+  /* fee structure */
+  job('#feeTable', ['fees'], f => {
+    if (!f) return;
+    if (f.session && $('#feeSession')) $('#feeSession').textContent = f.session;
+    const rows = (f.groups || []).map(g => `<tr class="sub"><td colspan="3">${esc(g.heading)}</td></tr>` + (g.rows || []).map(r => `<tr><td>${esc(r.item)}</td><td class="num">${esc(r.vsp)}</td><td class="num">${esc(r.nvsp)}</td></tr>`).join('')).join('');
+    if (rows) $('#feeTable').innerHTML = `<div class="tbl-wrap"><table class="t"><thead><tr><th>Fee head</th><th class="num">${esc(f.col1 || 'Column 1')}</th><th class="num">${esc(f.col2 || 'Column 2')}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    if (f.note && $('#feeNote')) $('#feeNote').textContent = f.note;
+    if (f.scan && $('#feeScan')) {
+      const u = encodeURI(rel(f.scan)); const b = $('#feeScan .docimg'); if (b) { b.dataset.zoom = u; const im = $('img', b); if (im) { im.src = u; } }
+      if ($('#feeDl')) $('#feeDl').href = u;
+    }
+  });
+
   /* gallery + albums */
   job('#gallery', ['gallery'], g => {
     const el = $('#gallery'); let it = (g && g.items) || []; if (!it.length) return;
@@ -91,8 +120,10 @@
   window.DPS = Object.assign(window.DPS || {}, {
     data,
     // entries for the site search so newly published items are findable immediately
-    searchEntries: () => Promise.all(['circulars', 'assignments', 'syllabus', 'news'].map(need)).then(() => {
+    searchEntries: () => Promise.all(['circulars', 'assignments', 'syllabus', 'news', 'staff'].map(need)).then(() => {
       const out = [];
+      const sf = data.staff || {};
+      ['leadership', 'teachers', 'office', 'support'].forEach(k => (sf[k] || []).forEach(p => out.push({ t: p.name, u: 'staff.html#' + (k === 'teachers' ? 'teachers' : k === 'leadership' ? 'leadership' : k), d: (p.role || '') + ' · Faculty & Staff', k: 'Person' })));
       ((data.circulars || {}).items || []).forEach(i => out.push({ t: i.title, u: rel(i.file), d: 'Circular' + (i.date ? ' · ' + fmt(i.date) : ''), k: 'Download' }));
       ((data.assignments || {}).items || []).forEach(i => out.push({ t: i.label, u: rel(i.file), d: 'Assignment · Download', k: 'Download' }));
       ((data.syllabus || {}).items || []).forEach(i => out.push({ t: i.label, u: rel(i.file), d: 'Syllabus · Download', k: 'Download' }));

@@ -157,18 +157,18 @@
   addEventListener('keydown', e => { if (lb.hidden) return; if (e.key === 'Escape') closeLb(); if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
 
   /* ---------- staff filter ---------- */
-  const sq = $('#staffQ'), grid = $('#staffGrid');
-  if (grid) {
+  (window.DPS_READY || Promise.resolve()).then(() => {
+    const sq = $('#staffQ'), grid = $('#staffGrid');
+    if (!grid) return;
     let role = '';
-    const cards = $$('.person', grid);
     const apply = () => {
       const t = (sq.value || '').toLowerCase().trim(); let n = 0;
-      cards.forEach(c => { const ok = (!t || c.dataset.name.includes(t)) && (!role || c.dataset.role === role); c.hidden = !ok; if (ok) n++; });
+      $$('.person', grid).forEach(c => { const ok = (!t || c.dataset.name.includes(t)) && (!role || c.dataset.role === role); c.hidden = !ok; if (ok) n++; });
       $('#staffEmpty').hidden = n > 0;
     };
     sq.addEventListener('input', apply);
     $$('#roleF .chip').forEach(c => c.addEventListener('click', () => { $$('#roleF .chip').forEach(x => x.classList.toggle('on', x === c)); role = c.dataset.role; apply(); }));
-  }
+  });
 
   /* ---------- downloads search ---------- */
   const dq = $('#docQ');
