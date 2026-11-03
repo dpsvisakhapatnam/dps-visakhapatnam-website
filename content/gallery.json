@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "category": "culture",
+      "wide": false,
+      "image": "/uploads/20240504_114103.jpg",
+      "caption": "School Front View"
+    },
+    {
       "image": "assets/gallery/g1.jpg",
       "caption": "International Yoga Day",
       "category": "sports",
