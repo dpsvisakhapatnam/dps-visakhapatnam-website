@@ -24,12 +24,6 @@
   ],
   "teachers": [
     {
-      "name": "R Dhana Lakshmi",
-      "role": "Teacher",
-      "qualification": "Msc, Bed",
-      "joined": "11-06-2026"
-    },
-    {
       "name": "G S Rajyalakshmi",
       "role": "PGT",
       "qualification": "M A, B Ed",
@@ -338,13 +332,6 @@
       "photo": "assets/img/img-staff-ritu-360.jpg"
     },
     {
-      "name": "Ketki Sharma Narwal",
-      "role": "TEACHER",
-      "qualification": "MSc, B Ed, CTET",
-      "joined": "11-06-2025",
-      "photo": "assets/img/img-staff-ketki-360.jpg"
-    },
-    {
       "name": "Satakshi Patra",
       "role": "TEACHER",
       "qualification": "BA(Eng Hons), B Ed",
@@ -383,12 +370,6 @@
       "joined": "06-10-2025"
     },
     {
-      "name": "Anwesha Chandra",
-      "role": "TEACHER",
-      "qualification": "",
-      "joined": ""
-    },
-    {
       "name": "Vempada Ramalakshmi",
       "role": "TEACHER",
       "qualification": "M.P.Ed",
@@ -401,10 +382,34 @@
       "joined": "23-10-2025"
     },
     {
-      "name": "PRITI GIRI",
+      "name": "Priti Giri",
       "role": "Teacher",
-      "qualification": "BED",
+      "qualification": "BSc, Bed",
       "joined": "11-06-2026"
+    },
+    {
+      "name": "R Dhana Lakshmi",
+      "role": "Teacher",
+      "qualification": "Msc, Bed",
+      "joined": "11-06-2026"
+    },
+    {
+      "name": "Christy Babu",
+      "role": "Teacher",
+      "qualification": "MA, B Ed",
+      "joined": "11-06-2026"
+    },
+    {
+      "name": "BVM Usha Kiranmayi",
+      "role": "Teacher",
+      "qualification": "MSc, B Ed",
+      "joined": "12-07-2026"
+    },
+    {
+      "name": "Sujata Nayak",
+      "role": "Teacher",
+      "qualification": "M Sc, B Ed",
+      "joined": "01-07-2026"
     }
   ],
   "office": [
