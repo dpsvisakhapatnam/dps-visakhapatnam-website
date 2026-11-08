@@ -24,6 +24,12 @@
   ],
   "teachers": [
     {
+      "name": "PRITI GIRI",
+      "role": "Teacher",
+      "qualification": "BED",
+      "joined": "11-06-2026"
+    },
+    {
       "name": "G S Rajyalakshmi",
       "role": "PGT",
       "qualification": "M A, B Ed",
