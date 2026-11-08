@@ -24,9 +24,9 @@
   ],
   "teachers": [
     {
-      "name": "PRITI GIRI",
+      "name": "R Dhana Lakshmi",
       "role": "Teacher",
-      "qualification": "BED",
+      "qualification": "Msc, Bed",
       "joined": "11-06-2026"
     },
     {
@@ -399,6 +399,12 @@
       "role": "TEACHER",
       "qualification": "B Sc, B Ed",
       "joined": "23-10-2025"
+    },
+    {
+      "name": "PRITI GIRI",
+      "role": "Teacher",
+      "qualification": "BED",
+      "joined": "11-06-2026"
     }
   ],
   "office": [
