@@ -304,18 +304,18 @@
       "photo": "assets/img/img-staff-veena-360.jpg"
     },
     {
-      "name": "Sanyukta Singh",
-      "role": "TEACHER",
-      "qualification": "BA,B Ed,CTET",
-      "joined": "11-06-2024",
-      "photo": "assets/img/img-staff-sanyukth-360.jpg"
-    },
-    {
       "name": "Vishnu Vardhan Sainath Maddala",
       "role": "TEACHER",
       "qualification": "MSC MATHEMATICS, M Ed",
       "joined": "11-06-2024",
       "photo": "assets/img/img-staff-vishnu-360.jpg"
+    },
+    {
+      "name": "Sanyukta Singh",
+      "role": "TEACHER",
+      "qualification": "BA,B Ed,CTET",
+      "joined": "11-06-2024",
+      "photo": "assets/img/img-staff-sanyukth-360.jpg"
     },
     {
       "name": "Snigdha Rana",
@@ -366,17 +366,17 @@
       "photo": "/uploads/whatsapp-image-2026-11-08-at-16.19.19.jpeg"
     },
     {
-      "name": "Remya Rajiv",
-      "role": "TEACHER",
-      "qualification": "M Sc Physics, B Ed",
-      "joined": "06-10-2025"
-    },
-    {
       "name": "Vempada Ramalakshmi",
       "role": "TEACHER",
       "qualification": "M.P.Ed",
       "joined": "06-10-2025",
       "photo": "/uploads/whatsapp-image-2026-11-08-at-16.07.58.jpeg"
+    },
+    {
+      "name": "Remya Rajiv",
+      "role": "TEACHER",
+      "qualification": "M Sc Physics, B Ed",
+      "joined": "06-10-2025"
     },
     {
       "name": "K Sravani",
@@ -409,10 +409,27 @@
       "joined": "12-07-2026"
     },
     {
+      "name": "Tanushree Parida",
+      "role": "Teacher",
+      "qualification": "MA, BED, MPHIL",
+      "joined": "01-07-2026"
+    },
+    {
       "name": "Sujata Nayak",
       "role": "Teacher",
       "qualification": "M Sc, B Ed",
       "joined": "01-07-2026"
+    },
+    {
+      "name": "Milli Acharjya",
+      "role": "Teacher",
+      "qualification": "MA, B Ed",
+      "joined": "01-07-2026"
+    },
+    {
+      "name": "Ankita Kamodia",
+      "role": "Teacher",
+      "qualification": "B Com, B Ed"
     }
   ],
   "office": [
