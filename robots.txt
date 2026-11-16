@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://dpsvisakhapatnam.netlify.app/sitemap.xml
+Sitemap: https://www.dpsvisakhapatnam.org/sitemap.xml
