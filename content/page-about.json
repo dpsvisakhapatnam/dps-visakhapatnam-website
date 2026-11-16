@@ -64,9 +64,9 @@
   ],
   "mc": [
     {
-      "name": "Shri B K Chaturvedi",
-      "role": "Chairman – Managing Committee",
-      "photo": "assets/img/img-shri-b-k-chaturvedi-360.jpg"
+      "name": "Shri Rahul Singh",
+      "role": "Member, DPS Society",
+      "photo": "/uploads/img-shri-rahul-singh-360.jpg"
     },
     {
       "name": "Dr (Mrs) Malini Vijay Shankar",
@@ -86,26 +86,21 @@
     {
       "name": "Shri Pravin Srivastava",
       "role": "Member – MC",
-      "photo": "assets/img/img-shri-pravin-srivastava-360.jpg"
+      "photo": "/uploads/images.jfif"
     },
     {
-      "name": "Shri N V S Raju",
+      "name": "Mrs. N. Bhanu",
       "role": "GM (HR) RINL VSP · Pro-Vice Chairman",
-      "photo": "assets/img/img-raju-360.jpg"
-    },
-    {
-      "name": "Dr S B V S P Sastry",
-      "role": "DGM (Training) RINL VSP · Member",
-      "photo": "assets/img/img-sastry-360.jpg"
+      "photo": "/uploads/images-1-.jfif"
     },
     {
       "name": "Shri Ch Leela Srinivas",
-      "role": "DGM (F&A) RINL VSP · Member",
+      "role": "GM (F&A) RINL VSP · Member",
       "photo": "assets/img/img-shri-ch-leela-srinivas-360.jpg"
     },
     {
       "name": "Shri Padma Ranjan Roy",
-      "role": "Sr Manager (TA) RINL VSP · Member",
+      "role": "Sr Manager (Sinter Plant) RINL VSP · Member",
       "photo": "assets/img/img-roy-360.jpg"
     }
   ]
