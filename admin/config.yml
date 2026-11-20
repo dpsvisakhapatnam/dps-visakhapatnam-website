@@ -233,7 +233,6 @@ collections:
               - { label: "Name", name: name, widget: string }
               - { label: "Designation", name: role, widget: string, hint: "e.g. PGT, TGT, PRT, Principal, UDC, Watchman" }
               - { label: "Qualification", name: qualification, widget: string, required: false }
-              - { label: "Date of joining", name: joined, widget: string, required: false, hint: "e.g. 12-06-2024" }
               - { label: "Photo", name: photo, widget: image, allow_multiple: false, required: false, hint: "A head-and-shoulders photo works best. Without a photo, initials are shown." }
           - label: "Teachers"
             name: teachers

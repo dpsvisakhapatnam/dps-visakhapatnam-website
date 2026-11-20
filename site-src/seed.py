@@ -56,7 +56,7 @@ def run():
     from pages_a import FEE_ROWS
     st = parse_staff()
     def person(x):
-        d = {'name': x['name'], 'role': x['role'], 'qualification': x['qual'] if x['qual'] != '-' else '', 'joined': x['joined']}
+        d = {'name': x['name'], 'role': x['role'], 'qualification': x['qual'] if x['qual'] != '-' else ''}
         ph = staff_photo(x)
         if ph:
             d['photo'] = ph

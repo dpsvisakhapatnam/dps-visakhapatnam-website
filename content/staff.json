@@ -4,21 +4,18 @@
       "name": "Samir Kumar Pandey",
       "role": "Principal",
       "qualification": "M Phil, B Ed",
-      "joined": "01-09-2016",
       "photo": "assets/img/img-staff-skpandey-360.jpg"
     },
     {
       "name": "T N Nagini",
       "role": "Co-ordinator (Junior School)",
       "qualification": "M Sc, B Ed",
-      "joined": "12-02-1998",
       "photo": "assets/img/img-staff-tn-360.png"
     },
     {
       "name": "Kavita Pandey",
       "role": "Co-ordinator (Senior School)",
       "qualification": "M Sc, B Ed",
-      "joined": "01-11-2016",
       "photo": "assets/img/img-staff-kavitapandey-360.jpg"
     }
   ],
@@ -27,404 +24,345 @@
       "name": "G S Rajyalakshmi",
       "role": "PGT",
       "qualification": "M A, B Ed",
-      "joined": "15-06-1992",
       "photo": "assets/img/img-staff-rj-360.png"
     },
     {
       "name": "V D Sasiprabha",
       "role": "TGT",
       "qualification": "M Sc, B Ed",
-      "joined": "01-07-1994",
       "photo": "assets/img/img-staff-sasiprabha-360.jpg"
     },
     {
       "name": "N V S V N Murthy",
       "role": "TGT",
       "qualification": "M C A",
-      "joined": "04-04-2001",
       "photo": "assets/img/img-staff-nm-360.png"
     },
     {
       "name": "L Yoganand Choudhary",
       "role": "TGT",
       "qualification": "B Sc, B Ed",
-      "joined": "28-05-2002",
       "photo": "assets/img/img-staff-yoganand-360.jpg"
     },
     {
       "name": "K V Ranganayaki",
       "role": "TGT",
       "qualification": "M Sc, B Ed",
-      "joined": "04-07-1994",
       "photo": "assets/img/img-staff-ranganayaki-360.jpg"
     },
     {
       "name": "G Devi",
       "role": "TGT",
       "qualification": "M Sc (Comp.)",
-      "joined": "03-08-2007",
       "photo": "assets/img/img-staff-gdevi-360.jpg"
     },
     {
       "name": "P Nirmala",
       "role": "Pr T",
       "qualification": "B Ed, Msc Botany, Msc Psychology",
-      "joined": "09-09-1997",
       "photo": "assets/img/img-staff-nirmala-360.jpg"
     },
     {
       "name": "P Jyothi Reddy",
       "role": "Pr T",
       "qualification": "M A, B Ed",
-      "joined": "04-04-2001",
       "photo": "assets/img/img-staff-jyothireddy-360.jpg"
     },
     {
       "name": "V Sreedevi",
       "role": "Pr T",
       "qualification": "B Sc, B Ed",
-      "joined": "04-04-2001",
       "photo": "assets/img/img-staff-vsreedevi-360.jpg"
     },
     {
       "name": "L Maruthi Devi",
       "role": "Pr T",
       "qualification": "M A, B Ed",
-      "joined": "04-04-2001",
       "photo": "assets/img/img-staff-marutidevi-360.jpg"
     },
     {
       "name": "P Sharada",
       "role": "Pr T",
       "qualification": "B Sc, B Ed",
-      "joined": "12-06-2002",
       "photo": "assets/img/img-staff-psarada-360.jpg"
     },
     {
       "name": "Mamta Choudhary",
       "role": "Pr T",
       "qualification": "M Sc, B Ed",
-      "joined": "18-05-2002",
       "photo": "assets/img/img-staff-mamata-360.jpg"
     },
     {
       "name": "L Girija",
       "role": "Pr T",
       "qualification": "M A, B Ed",
-      "joined": "21-06-2004",
       "photo": "assets/img/img-staff-kgirija-360.jpg"
     },
     {
       "name": "Vandana Pathak",
       "role": "Pr T",
       "qualification": "B Sc, B Ed",
-      "joined": "21-06-2004",
       "photo": "assets/img/img-staff-vandana-360.jpg"
     },
     {
       "name": "S Aruna",
       "role": "Pr T",
       "qualification": "M A, B Ed, M Com",
-      "joined": "03-08-2007",
       "photo": "assets/img/img-staff-sa-360.png"
     },
     {
       "name": "A Sujata",
       "role": "Pr T",
       "qualification": "M Com, Dip (Music)",
-      "joined": "03-08-2007",
       "photo": "assets/img/img-staff-sujata-360.jpg"
     },
     {
       "name": "P Nagendra",
       "role": "Pr T",
       "qualification": "B P Ed, M Com",
-      "joined": "03-08-2007",
       "photo": "assets/img/img-staff-nagendra-360.jpg"
     },
     {
       "name": "U Rama Krishna",
       "role": "Pr T",
       "qualification": "B P Ed, B Com",
-      "joined": "03-08-2007",
       "photo": "assets/img/img-staff-ramakrishna-360.jpg"
     },
     {
       "name": "Debjani Paul",
       "role": "Pr T",
       "qualification": "M Sc, B Ed",
-      "joined": "03-08-2007",
       "photo": "assets/img/img-staff-debjani-360.jpg"
     },
     {
       "name": "N Chandra Priya",
       "role": "Pr T",
       "qualification": "B.Sc Comp, PGDAST",
-      "joined": "13-08-2007",
       "photo": "assets/img/img-staff-chandrapriya-360.jpg"
     },
     {
       "name": "Sagarika Satpathy",
       "role": "Pr T",
       "qualification": "M A, B Ed",
-      "joined": "25-06-2008",
       "photo": "assets/img/img-staff-sagarika-360.jpg"
     },
     {
       "name": "Ch Praveena",
       "role": "Pr T",
       "qualification": "M Sc, B Ed",
-      "joined": "02-01-2015",
       "photo": "assets/img/img-staff-praveena-360.jpg"
     },
     {
       "name": "M Soumya",
       "role": "Pr T",
       "qualification": "B Sc, B Ed",
-      "joined": "02-01-2015",
       "photo": "assets/img/img-staff-soumya-360.jpg"
     },
     {
       "name": "G Sandhya Rani",
       "role": "Pr T",
       "qualification": "M C A",
-      "joined": "02-01-2015",
       "photo": "assets/img/img-staff-sandya-360.jpg"
     },
     {
       "name": "V Tejeswari",
       "role": "Pr T",
       "qualification": "B A, B Ed",
-      "joined": "01-04-2016",
       "photo": "assets/img/img-staff-tejeswari-360.jpg"
     },
     {
       "name": "Ravi Kommuri",
       "role": "Pr T",
       "qualification": "M Sc, B Ed",
-      "joined": "12-06-2019",
       "photo": "assets/img/img-staff-rk-360.png"
     },
     {
       "name": "V Venkata Rao",
       "role": "Pr T",
       "qualification": "M A, TPT",
-      "joined": "12-06-2019",
       "photo": "assets/img/img-staff-vv-360.png"
     },
     {
       "name": "J Maheswara Rao",
       "role": "Pr T",
       "qualification": "MFA",
-      "joined": "12-06-2019",
       "photo": "assets/img/img-staff-jm-360.png"
     },
     {
       "name": "K Muralidhar Rao",
       "role": "Pr T",
       "qualification": "M A, M Ed",
-      "joined": "12-06-2019",
       "photo": "assets/img/img-staff-mr-360.png"
     },
     {
       "name": "Dr Jajati Kesari Nayak",
       "role": "Pr T",
       "qualification": "M A, B Ed, Ph D",
-      "joined": "14-06-2019",
       "photo": "assets/img/img-staff-jkn-360.png"
     },
     {
       "name": "Sridevi Singintham",
       "role": "Pr T",
       "qualification": "M.Com, M A, B Ed,CTET, AP-TET, ARMY TET",
-      "joined": "12-04-2018",
       "photo": "assets/img/img-staff-sdv-360.png"
     },
     {
       "name": "Addanki Dattasai",
       "role": "Pr T",
       "qualification": "M A, B Ed",
-      "joined": "05-08-2020",
       "photo": "assets/img/img-staff-ad-360.png"
     },
     {
       "name": "Neha Singh",
       "role": "Pr T",
       "qualification": "MBA, B Ed, M.A.",
-      "joined": "12-06-2019",
       "photo": "assets/img/img-staff-ns-360.png"
     },
     {
       "name": "A Sridevi Murthy",
       "role": "Pr T",
       "qualification": "M A, B Ed",
-      "joined": "11-06-2022",
       "photo": "assets/img/img-staff-sreedevi-murthy-360.jpg"
     },
     {
       "name": "Pallavi Pradhan",
       "role": "Pr T",
       "qualification": "M sc, B Ed",
-      "joined": "15-09-2021",
       "photo": "assets/img/img-staff-pallavi-360.jpg"
     },
     {
       "name": "Dr Shweta Rani",
       "role": "Pr T",
       "qualification": "M A, B Ed, M Phil,Ph D",
-      "joined": "03-01-2022",
       "photo": "assets/img/img-staff-swetha-360.jpg"
     },
     {
       "name": "Sarita Sharma",
       "role": "Pr T",
       "qualification": "MA HINDI,B Ed, CTET",
-      "joined": "04-09-2023",
       "photo": "assets/img/img-staff-sarita-360.jpg"
     },
     {
       "name": "Sabyasachi Rout",
       "role": "Pr T",
       "qualification": "Ph D, M Sc Mathematics, B Ed",
-      "joined": "12-06-2024",
       "photo": "assets/img/img-staff-sabyasachi-360.jpg"
     },
     {
       "name": "Bandaru Mangunaidu",
       "role": "TEACHER",
       "qualification": "MA Telugu, TPT, TET",
-      "joined": "12-09-2022",
       "photo": "assets/img/img-staff-mangunaidu-360.jpg"
     },
     {
       "name": "Veena Singh",
       "role": "TEACHER",
       "qualification": "MA ENGLISH",
-      "joined": "12-06-2023",
       "photo": "assets/img/img-staff-veena-360.jpg"
     },
     {
       "name": "Vishnu Vardhan Sainath Maddala",
       "role": "TEACHER",
       "qualification": "MSC MATHEMATICS, M Ed",
-      "joined": "11-06-2024",
       "photo": "assets/img/img-staff-vishnu-360.jpg"
     },
     {
       "name": "Sanyukta Singh",
       "role": "TEACHER",
       "qualification": "BA,B Ed,CTET",
-      "joined": "11-06-2024",
       "photo": "assets/img/img-staff-sanyukth-360.jpg"
     },
     {
       "name": "Snigdha Rana",
       "role": "TEACHER",
       "qualification": "MSC B ED",
-      "joined": "11-06-2024",
       "photo": "assets/img/img-staff-snighda-360.jpg"
     },
     {
       "name": "Ritu Pathak",
       "role": "TEACHER",
       "qualification": "M.COM, B Ed",
-      "joined": "09-12-2024",
       "photo": "assets/img/img-staff-ritu-360.jpg"
     },
     {
       "name": "Satakshi Patra",
       "role": "TEACHER",
-      "qualification": "BA(Eng Hons), B Ed",
-      "joined": "11-06-2025"
+      "qualification": "BA(Eng Hons), B Ed"
     },
     {
       "name": "P Surya Nagasri",
       "role": "TEACHER",
       "qualification": "Bsc, BEd, CTET, AP TET",
-      "joined": "11-06-2025",
       "photo": "/uploads/whatsapp-image-2026-11-08-at-16.21.34.jpeg"
     },
     {
       "name": "Sunita Das",
       "role": "TEACHER",
       "qualification": "MA BEd",
-      "joined": "11-06-2025",
       "photo": "assets/img/img-staff-sunita-1-360.jpg"
     },
     {
       "name": "Chandra Prakash Yadav",
       "role": "TEACHER",
       "qualification": "MA Hindi, B Ed, PGDCA",
-      "joined": "03-07-2025",
       "photo": "assets/img/img-staff-chandra-prakash-yadav-360.jpg"
     },
     {
       "name": "Suchetana Mondal",
       "role": "TEACHER",
       "qualification": "MA English",
-      "joined": "01-09-2025",
       "photo": "/uploads/whatsapp-image-2026-11-08-at-16.19.19.jpeg"
     },
     {
       "name": "Vempada Ramalakshmi",
       "role": "TEACHER",
       "qualification": "M.P.Ed",
-      "joined": "06-10-2025",
       "photo": "/uploads/whatsapp-image-2026-11-08-at-16.07.58.jpeg"
     },
     {
       "name": "Remya Rajiv",
       "role": "TEACHER",
-      "qualification": "M Sc Physics, B Ed",
-      "joined": "06-10-2025"
+      "qualification": "M Sc Physics, B Ed"
     },
     {
       "name": "K Sravani",
       "role": "TEACHER",
-      "qualification": "B Sc, B Ed",
-      "joined": "23-10-2025"
+      "qualification": "B Sc, B Ed"
     },
     {
       "name": "Priti Giri",
       "role": "Teacher",
-      "qualification": "BSc, Bed",
-      "joined": "11-06-2026"
+      "qualification": "BSc, Bed"
     },
     {
       "name": "R Dhana Lakshmi",
       "role": "Teacher",
-      "qualification": "Msc, Bed",
-      "joined": "11-06-2026"
+      "qualification": "Msc, Bed"
     },
     {
       "name": "Christy Babu",
       "role": "Teacher",
-      "qualification": "MA, B Ed",
-      "joined": "11-06-2026"
+      "qualification": "MA, B Ed"
     },
     {
       "name": "BVM Usha Kiranmayi",
       "role": "Teacher",
-      "qualification": "MSc, B Ed",
-      "joined": "12-07-2026"
+      "qualification": "MSc, B Ed"
     },
     {
       "name": "Tanushree Parida",
       "role": "Teacher",
-      "qualification": "MA, BED, MPHIL",
-      "joined": "01-07-2026"
+      "qualification": "MA, BED, MPHIL"
     },
     {
       "name": "Sujata Nayak",
       "role": "Teacher",
-      "qualification": "M Sc, B Ed",
-      "joined": "01-07-2026"
+      "qualification": "M Sc, B Ed"
     },
     {
       "name": "Milli Acharjya",
       "role": "Teacher",
-      "qualification": "MA, B Ed",
-      "joined": "01-07-2026"
+      "qualification": "MA, B Ed"
     },
     {
       "name": "Ankita Kamodia",
@@ -437,35 +375,30 @@
       "name": "T Srinivasa Rao",
       "role": "UDC",
       "qualification": "B A",
-      "joined": "11-10-1992",
       "photo": "assets/img/img-staff-tsrinivas-360.png"
     },
     {
       "name": "R Ramana Murthy",
       "role": "Lab Asst",
       "qualification": "B Sc",
-      "joined": "01-04-1997",
       "photo": "assets/img/img-staff-ramanamurthy-360.jpg"
     },
     {
       "name": "Sashi Narayan Dash",
       "role": "LDC",
       "qualification": "B A",
-      "joined": "16-01-2004",
       "photo": "assets/img/img-staff-snd-360.png"
     },
     {
       "name": "K Taaraa Latha",
       "role": "LDC",
       "qualification": "M Com",
-      "joined": "01-07-2022",
       "photo": "assets/img/img-staff-tara-360.jpg"
     },
     {
       "name": "Nambaru Viswa Vijaya Prasad",
       "role": "LDC",
       "qualification": "M A, B Ed,P.G.D.C.A",
-      "joined": "01-12-2020",
       "photo": "assets/img/img-staff-np-360.png"
     }
   ],
@@ -474,105 +407,90 @@
       "name": "Sk Meeravali",
       "role": "Watchman",
       "qualification": "10th",
-      "joined": "01-04-1994",
       "photo": "assets/img/img-staff-meeravali-360.jpg"
     },
     {
       "name": "G P Naidu",
       "role": "Driver",
       "qualification": "",
-      "joined": "20-06-1994",
       "photo": "assets/img/img-staff-gpnaidu-360.jpg"
     },
     {
       "name": "T Naidu",
       "role": "Driver",
       "qualification": "",
-      "joined": "20-06-1994",
       "photo": "assets/img/img-staff-tnaidu-360.jpg"
     },
     {
       "name": "Abhijit Chattaraj",
       "role": "Peon",
       "qualification": "",
-      "joined": "01-04-1997",
       "photo": "assets/img/img-staff-sr-360.png"
     },
     {
       "name": "Y Giri Babu",
       "role": "Bus-Helper",
       "qualification": "",
-      "joined": "01-03-2004",
       "photo": "assets/img/img-staff-giribabu-360.jpg"
     },
     {
       "name": "B Srinivasa Rao",
       "role": "Gen Emp",
       "qualification": "10th",
-      "joined": "01-03-2004",
       "photo": "assets/img/img-staff-bsr-360.png"
     },
     {
       "name": "G Chandra Rao",
       "role": "Gen Emp",
       "qualification": "10th",
-      "joined": "01-03-2004",
       "photo": "assets/img/img-staff-chandrarao-360.jpg"
     },
     {
       "name": "W Paidi Raju",
       "role": "Gen Emp",
       "qualification": "",
-      "joined": "14-01-2008",
       "photo": "assets/img/img-staff-pd-360.png"
     },
     {
       "name": "K Venkateswarlu",
       "role": "Gen Emp",
       "qualification": "12th",
-      "joined": "14-01-2008",
       "photo": "assets/img/img-staff-venkateswarulu-360.jpg"
     },
     {
       "name": "P Ramana Babu",
       "role": "Gen Emp",
       "qualification": "10th",
-      "joined": "03-08-2007",
       "photo": "assets/img/img-staff-ramanababu-360.jpg"
     },
     {
       "name": "Prabin Kumar Chand",
       "role": "Daftary",
       "qualification": "",
-      "joined": "01-04-2004",
       "photo": "assets/img/img-staff-praveenkr-360.jpg"
     },
     {
       "name": "S Dharma Rao",
       "role": "Peon",
       "qualification": "",
-      "joined": "14-01-2008",
       "photo": "assets/img/img-staff-dm-360.png"
     },
     {
       "name": "R Gauranga",
       "role": "Gardener",
       "qualification": "",
-      "joined": "14-01-2008",
       "photo": "assets/img/img-staff-gourang-360.jpg"
     },
     {
       "name": "M Gangamma",
       "role": "Gen Emp",
       "qualification": "",
-      "joined": "01-04-2016",
       "photo": "assets/img/img-staff-gangamma-360.jpg"
     },
     {
       "name": "S Krishnaveni",
       "role": "Gen Emp",
       "qualification": "",
-      "joined": "01-04-2016",
       "photo": "assets/img/img-staff-krishnaveni-360.jpg"
     }
   ]

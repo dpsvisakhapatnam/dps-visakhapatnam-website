@@ -79,7 +79,7 @@
   const initials = n => { const w = String(n).replace(/^(Dr\.?|Mr\.?|Mrs\.?|Ms\.?|Smt\.?|Shri)\s+/i, '').split(/\s+/).filter(Boolean); return ((w[0] || '?')[0] + (w.length > 1 ? w[w.length - 1][0] : '')).toUpperCase(); };
   const person = p => {
     const media = p.photo ? imgTag(p.photo, 360, p.name) : `<div class="ph">${esc(initials(p.name))}</div>`;
-    return `<article class="person" data-name="${esc([p.name, p.role, p.qualification].join(' ').toLowerCase())}" data-role="${esc(String(p.role || '').toUpperCase())}">${media}<div><b>${esc(p.name)}</b><span class="role">${esc(p.role)}</span>${p.qualification ? `<span>${esc(p.qualification)}</span>` : ''}${p.joined ? `<span>Joined ${esc(p.joined)}</span>` : ''}</div></article>`;
+    return `<article class="person" data-name="${esc([p.name, p.role, p.qualification].join(' ').toLowerCase())}" data-role="${esc(String(p.role || '').toUpperCase())}">${media}<div><b>${esc(p.name)}</b><span class="role">${esc(p.role)}</span>${p.qualification ? `<span>${esc(p.qualification)}</span>` : ''}</div></article>`;
   };
   job('#staffGrid', ['staff'], s => {
     if (!s) return;

@@ -19,9 +19,8 @@ def person_card(p, lead=False):
     ph = staff_photo(p)
     media = f'<img src="{ph}" alt="{esc(p["name"])}" loading="lazy">' if ph else f'<div class="ph">{initials(p["name"])}</div>'
     qual = f'<span>{esc(p["qual"])}</span>' if p['qual'] and p['qual'] != '-' else ''
-    joined = f'<span>Joined {esc(p["joined"])}</span>' if p.get('joined') else ''
     return (f'<article class="person" data-name="{esc((p["name"] + " " + p["role"] + " " + p["qual"]).lower())}" data-role="{esc(p["role"].upper())}">'
-            f'{media}<div><b>{esc(p["name"])}</b><span class="role">{esc(p["role"])}</span>{qual}{joined}</div></article>')
+            f'{media}<div><b>{esc(p["name"])}</b><span class="role">{esc(p["role"])}</span>{qual}</div></article>')
 
 
 # ---------------------------------------------------------------- ABOUT
