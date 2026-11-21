@@ -1,6 +1,10 @@
 {
   "items": [
     {
+      "text": "test",
+      "link": "test"
+    },
+    {
       "text": "Assignments Aug–Sep 2026-27 now available",
       "link": "resources.html#assignments"
     },
@@ -23,10 +27,6 @@
     {
       "text": "RIDS recognition 2026–2029 by the British Council",
       "link": "campus.html#rids"
-    },
-    {
-      "text": "test",
-      "link": "test"
     }
   ]
 }
