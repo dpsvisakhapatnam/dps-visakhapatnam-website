@@ -109,6 +109,9 @@
     slides.forEach((_, i) => { const b = document.createElement('button'); b.setAttribute('role', 'tab'); b.setAttribute('aria-label', 'Photo ' + (i + 1)); b.addEventListener('click', () => { show(i); start(); }); dots.appendChild(b); });
     const show = i => { cur = (i + slides.length) % slides.length; slides.forEach((s, k) => s.classList.toggle('on', k === cur)); $$('button', dots).forEach((d, k) => d.setAttribute('aria-selected', k === cur)); };
     const start = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => show(cur + 1), 6000); };
+    const loadRest = () => $$('.slide img[data-src]').forEach(im => { if (im.dataset.srcset) im.srcset = im.dataset.srcset; im.sizes = '100vw'; im.src = im.dataset.src; im.removeAttribute('data-src'); });
+    const idle = window.requestIdleCallback || (f => setTimeout(f, 1200));
+    if (document.readyState === 'complete') idle(loadRest); else addEventListener('load', () => idle(loadRest), { once: true });
     show(0); start();
   }
 

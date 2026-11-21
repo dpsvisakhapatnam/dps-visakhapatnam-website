@@ -78,4 +78,6 @@ import shutil
 shutil.copyfile(os.path.join(ROOT, 'site-src', 'styles.css'), os.path.join(ROOT, 'styles.css'))
 shutil.copyfile(os.path.join(ROOT, 'site-src', 'script.js'), os.path.join(ROOT, 'script.js'))
 shutil.copyfile(os.path.join(ROOT, 'site-src', 'content.js'), os.path.join(ROOT, 'content.js'))
+import optimize
+optimize.process_html(optimize.make_variants())
 print('search entries', len(index))

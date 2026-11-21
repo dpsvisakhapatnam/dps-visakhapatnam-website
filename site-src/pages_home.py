@@ -104,11 +104,11 @@ def build_index():
     body = f'''
 <section class="hero" aria-label="Welcome">
   <div class="slides" aria-hidden="true">
-    <div class="slide on" style="background-image:url(assets/gallery/g9.jpg)"></div>
-    <div class="slide" style="background-image:url(assets/gallery/g7.jpg)"></div>
-    <div class="slide" style="background-image:url(assets/gallery/g13.jpg)"></div>
-    <div class="slide" style="background-image:url(assets/gallery/g18.jpg)"></div>
-    <div class="slide" style="background-image:url(assets/gallery/g21.jpg)"></div>
+    <div class="slide on"><img src="assets/gallery/g9.jpg" alt="" fetchpriority="high"></div>
+    <div class="slide"><img data-hero data-src="assets/gallery/g7.jpg" alt=""></div>
+    <div class="slide"><img data-hero data-src="assets/gallery/g13.jpg" alt=""></div>
+    <div class="slide"><img data-hero data-src="assets/gallery/g18.jpg" alt=""></div>
+    <div class="slide"><img data-hero data-src="assets/gallery/g21.jpg" alt=""></div>
   </div>
   <div class="wrap hero-inner">
     <p class="eyebrow" data-text="hero_eyebrow">Established 1991 · Under the aegis of the DPS Society, New Delhi</p>

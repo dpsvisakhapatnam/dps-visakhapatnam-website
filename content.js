@@ -7,9 +7,13 @@
   const rel = p => String(p || '').replace(/^\/+/, '');
   // Photos uploaded through the admin may be large: let Netlify's image CDN shrink them on the live site.
   const pic = (p, w) => { p = rel(p); return live && /^uploads\//i.test(p) ? `/.netlify/images?url=/${encodeURI(p)}&w=${w}` : encodeURI(p); };
-  const fix = e => { const im = e.target; if (im.tagName === 'IMG' && im.dataset.raw && !im.dataset.tried) { im.dataset.tried = 1; im.src = im.dataset.raw; } };
+  const fix = e => { const im = e.target; if (im.tagName === 'IMG' && im.dataset.raw && !im.dataset.tried) { im.dataset.tried = 1; im.removeAttribute('srcset'); im.src = im.dataset.raw; } };
+  // Site photos (assets/gallery, assets/img) have phone-sized WebP copies in assets/rs/ - see optimize.py.
+  const rs = (p, w) => 'assets/rs/' + p.replace(/^assets\//, '').replace(/\//g, '-').replace(/\.\w+$/, '') + '-' + w + '.webp';
+  const cdn = (p, w) => `/.netlify/images?url=/${encodeURI(p)}&w=${w}`;
+  const srcsetFor = p => live && /^uploads\//i.test(p) ? ` srcset="${cdn(p, 480)} 480w, ${cdn(p, 960)} 960w" sizes="(max-width:700px) 50vw, 25vw"` : /^assets\/(gallery|img)\/[^/]+\.(jpe?g|png)$/i.test(p) && !/-\d{3}\.\w+$/.test(p) ? ` srcset="${encodeURI(rs(p, 480))} 480w, ${encodeURI(rs(p, 960))} 960w" sizes="(max-width:700px) 50vw, 25vw"` : '';
   document.addEventListener('error', fix, true);
-  const imgTag = (p, w, alt, extra = '') => `<img ${extra} loading="lazy" src="${pic(p, w)}" data-raw="${encodeURI(rel(p))}" alt="${esc(alt)}">`;
+  const imgTag = (p, w, alt, extra = '') => `<img ${extra} loading="lazy" decoding="async" src="${pic(p, w)}" data-raw="${encodeURI(rel(p))}"${srcsetFor(rel(p))} alt="${esc(alt)}">`;
   const get = n => fetch(`content/${n}.json`, { cache: 'no-cache' }).then(r => r.ok ? r.json() : Promise.reject(n)).catch(() => null);
   const fmt = d => { if (!d) return ''; const x = new Date(d + (String(d).length <= 10 ? 'T00:00:00' : '')); return isNaN(x) ? '' : x.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }); };
   const byDate = (a, b) => (b.date ? Date.parse(b.date) : -1) - (a.date ? Date.parse(a.date) : -1);
@@ -138,7 +142,7 @@
   job('#gallery', ['gallery'], g => {
     const el = $('#gallery'); let it = (g && g.items) || []; if (!it.length) return;
     const lim = +el.dataset.limit; if (lim) it = it.slice(0, lim);
-    el.innerHTML = it.map(i => `<button data-c="${esc(i.category || 'culture')}" data-cap="${esc(i.caption || '')}" class="g${i.wide ? ' wide' : ''}">${imgTag(i.image, 900, i.alt || i.caption || 'School photo')}</button>`).join('');
+    el.innerHTML = it.map((i, k) => `<button data-c="${esc(i.category || 'culture')}" data-cap="${esc(i.caption || '')}" class="g${i.wide ? ' wide' : ''}">${imgTag(i.image, 640, i.alt || i.caption || 'School photo', k < 4 ? 'loading="eager"' : '')}</button>`).join('');
   });
   job('#albumsList', ['albums'], a => {
     const al = (a && a.items) || []; if (!al.length) return;

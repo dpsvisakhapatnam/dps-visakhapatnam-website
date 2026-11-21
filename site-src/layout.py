@@ -148,13 +148,13 @@ def footer():
       <p><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
       <p class="tiny">Body to live · Mind to learn · Heart to love · Soul to leave a legacy.</p>
     </div>
-    <div><h4>The school</h4><ul>
+    <div><h3>The school</h3><ul>
       <li><a href="about.html">About us</a></li><li><a href="staff.html">Faculty &amp; staff</a></li><li><a href="academics.html">Academics</a></li>
       <li><a href="campus.html">Campus life</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="disclosure.html">Mandatory disclosure</a></li></ul></div>
-    <div><h4>Parents &amp; students</h4><ul>
+    <div><h3>Parents &amp; students</h3><ul>
       <li><a href="admissions.html">Admissions</a></li><li><a href="resources.html">Downloads</a></li><li><a href="news.html">News &amp; circulars</a></li>
       <li><a href="{ERP}" target="_blank" rel="noopener">ERP portal</a></li><li><a href="{FEES}" target="_blank" rel="noopener">Pay school fees</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h4>Useful links</h4><ul>
+    <div><h3>Useful links</h3><ul>
       <li><a href="https://swayam.gov.in/" target="_blank" rel="noopener">Swayam</a></li><li><a href="https://diksha.gov.in/" target="_blank" rel="noopener">Diksha</a></li>
       <li><a href="http://www.cbse.nic.in/" target="_blank" rel="noopener">CBSE</a></li><li><a href="http://www.ncert.nic.in/" target="_blank" rel="noopener">NCERT</a></li>
       <li><a href="http://www.dpsfamily.org/" target="_blank" rel="noopener">DPS Society</a></li><li><a href="https://www.britannica.com/" target="_blank" rel="noopener">Britannica</a></li><li><a href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a></li></ul></div>
@@ -239,8 +239,7 @@ def page(fname, title, desc, active, body, extra_head='', og_img='assets/gallery
 <meta name="theme-color" content="#0e4a2c">
 <meta property="og:type" content="website"><meta property="og:title" content="{esc(full_title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:image" content="{og_img}">
 <link rel="icon" type="image/png" href="assets/dpslogo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <script>try{{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}}catch(e){{}};document.documentElement.classList.add('js')</script>
 {extra_head}
@@ -252,7 +251,7 @@ def page(fname, title, desc, active, body, extra_head='', og_img='assets/gallery
 {body}
 </main>
 {footer()}
-<script src="content.js"></script>
-<script src="script.js"></script>
+<script src="content.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>'''

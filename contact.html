@@ -8,8 +8,7 @@
 <meta name="theme-color" content="#0e4a2c">
 <meta property="og:type" content="website"><meta property="og:title" content="Contact Us · Delhi Public School Visakhapatnam Steel Plant"><meta property="og:description" content="Contact Delhi Public School Visakhapatnam Steel Plant: address, phone, email, map and campus visit request."><meta property="og:image" content="assets/gallery/g9.jpg">
 <link rel="icon" type="image/png" href="assets/dpslogo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){};document.documentElement.classList.add('js')</script>
 
@@ -68,7 +67,7 @@
 <section class="section" id="alumni"><div class="wrap split">
   <div class="reveal"><p class="eyebrow dark">Alumni</p><h2 id="once-a-dpsian-always-a-dpsian">Once a DPSian, always a DPSian</h2><p>Our alumni carry the spirit of “Service before Self” into every field. Graduates are welcome to reconnect with the school, mentor current students and visit campus.</p>
     <p><a class="btn btn-green" href="mailto:dpsvisakhapatnam@gmail.com?subject=Alumni%20connect">Write to the alumni desk</a></p></div>
-  <div class="photo reveal" style="aspect-ratio:4/3"><img src="assets/gallery/g15.jpg" alt="Students on the school field" loading="lazy"></div>
+  <div class="photo reveal" style="aspect-ratio:4/3"><img src="assets/gallery/g15.jpg" alt="Students on the school field" loading="lazy" srcset="assets/rs/gallery-g15-480.webp 480w, assets/rs/gallery-g15-960.webp 960w, assets/rs/gallery-g15-1440.webp 1400w" sizes="(max-width:900px) 92vw, 600px" width="1400" height="630" decoding="async"></div>
 </div></section>
 </main>
 
@@ -86,13 +85,13 @@
       <p><a href="tel:+918912510686">(0891) 2510686</a><br><a href="mailto:dpsvisakhapatnam@gmail.com">dpsvisakhapatnam@gmail.com</a></p>
       <p class="tiny">Body to live · Mind to learn · Heart to love · Soul to leave a legacy.</p>
     </div>
-    <div><h4>The school</h4><ul>
+    <div><h3>The school</h3><ul>
       <li><a href="about.html">About us</a></li><li><a href="staff.html">Faculty &amp; staff</a></li><li><a href="academics.html">Academics</a></li>
       <li><a href="campus.html">Campus life</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="disclosure.html">Mandatory disclosure</a></li></ul></div>
-    <div><h4>Parents &amp; students</h4><ul>
+    <div><h3>Parents &amp; students</h3><ul>
       <li><a href="admissions.html">Admissions</a></li><li><a href="resources.html">Downloads</a></li><li><a href="news.html">News &amp; circulars</a></li>
       <li><a href="http://dpsv.edunext5.com/" target="_blank" rel="noopener">ERP portal</a></li><li><a href="https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=519243" target="_blank" rel="noopener">Pay school fees</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h4>Useful links</h4><ul>
+    <div><h3>Useful links</h3><ul>
       <li><a href="https://swayam.gov.in/" target="_blank" rel="noopener">Swayam</a></li><li><a href="https://diksha.gov.in/" target="_blank" rel="noopener">Diksha</a></li>
       <li><a href="http://www.cbse.nic.in/" target="_blank" rel="noopener">CBSE</a></li><li><a href="http://www.ncert.nic.in/" target="_blank" rel="noopener">NCERT</a></li>
       <li><a href="http://www.dpsfamily.org/" target="_blank" rel="noopener">DPS Society</a></li><li><a href="https://www.britannica.com/" target="_blank" rel="noopener">Britannica</a></li><li><a href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a></li></ul></div>
@@ -136,7 +135,7 @@
   <figure><img alt=""><figcaption></figcaption></figure>
   <button class="lb-n next" aria-label="Next">›</button>
 </div>
-<script src="content.js"></script>
-<script src="script.js"></script>
+<script src="content.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>
