@@ -119,7 +119,7 @@ def header(active):
 </div></div>
 <header class="site-header" id="top"><div class="wrap bar">
   <a class="brand" href="index.html" aria-label="{SITE} — home">
-    <img src="assets/dpslogo.png" alt="" width="46" height="51">
+    <img src="assets/dpslogo-sm.png" alt="" width="46" height="51">
     <span><strong>Delhi Public School</strong><small>Visakhapatnam Steel Plant</small></span>
   </a>
   <nav class="nav" id="nav" aria-label="Primary">{''.join(items)}</nav>
@@ -136,14 +136,14 @@ def footer():
     return f'''
 <section class="section tight" style="padding-bottom:0"><div class="wrap">
   <div class="cta reveal">
-    <div><h2>Come, see our campus.</h2><p>Admissions open every year from December. Visit our 13-acre campus in Ukkunagaram, meet our teachers and see why learning here is a joy.</p></div>
-    <div class="actions"><a class="btn btn-gold" href="contact.html#visit">Plan a campus visit</a><a class="btn btn-ghost" href="admissions.html#process">How admissions work</a></div>
+    <div><h2>Come, see our campus.</h2><p><span data-adm hidden>Admissions open every year from December. </span>Visit our 13-acre campus in Ukkunagaram, meet our teachers and see why learning here is a joy.</p></div>
+    <div class="actions"><a class="btn btn-gold" href="contact.html#visit">Plan a campus visit</a><a class="btn btn-ghost" href="admissions.html#process" data-adm hidden>How admissions work</a></div>
   </div>
 </div></section>
 <footer class="site-footer" style="margin-top:60px">
   <div class="wrap f-grid">
     <div>
-      <div class="brand"><img src="assets/dpslogo.png" alt="" width="46" height="51"><span><strong>Delhi Public School</strong><small>Visakhapatnam Steel Plant</small></span></div>
+      <div class="brand"><img src="assets/dpslogo-sm.png" alt="" width="46" height="51"><span><strong>Delhi Public School</strong><small>Visakhapatnam Steel Plant</small></span></div>
       <p>Sector VIII, Ukkunagaram,<br>Visakhapatnam, Andhra Pradesh 530032</p>
       <p><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
       <p class="tiny">Body to live · Mind to learn · Heart to love · Soul to leave a legacy.</p>
@@ -238,7 +238,7 @@ def page(fname, title, desc, active, body, extra_head='', og_img='assets/gallery
 <meta name="description" content="{esc(desc)}">
 <meta name="theme-color" content="#0e4a2c">
 <meta property="og:type" content="website"><meta property="og:title" content="{esc(full_title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:image" content="{og_img}">
-<link rel="icon" type="image/png" href="assets/dpslogo.png">
+<link rel="icon" type="image/png" href="assets/dpslogo-sm.png">
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <script>try{{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}}catch(e){{}};document.documentElement.classList.add('js')</script>

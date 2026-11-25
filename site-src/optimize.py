@@ -18,7 +18,7 @@ from PIL import Image, ImageOps
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'assets', 'rs')
-WIDTHS = (480, 960, 1440)
+WIDTHS = (480, 720, 960, 1440)
 MIN_SOURCE = 560  # smaller pictures (staff photos, badges) are already light enough
 SIZES_DEFAULT = '(max-width:900px) 92vw, 600px'
 
@@ -64,7 +64,7 @@ def make_variants():
                 v = im.resize((tw, th), Image.LANCZOS) if tw != w0 else im
                 has_alpha = v.mode in ('RGBA', 'LA') or (v.mode == 'P' and 'transparency' in v.info)
                 v = v.convert('RGBA' if has_alpha else 'RGB')
-                v.save(dst, 'WEBP', quality=74, method=4)
+                v.save(dst, 'WEBP', quality=68, method=6)
                 made += 1
             sizes.append((tw, out_rel))
         info[rel] = (w0, h0, sizes)
@@ -125,6 +125,34 @@ def process_html(info):
             open(page, 'w', encoding='utf8').write(s)
             changed += 1
     print(f'  pages updated with responsive images: {changed}')
+
+
+def make_logo():
+    """The school crest is shown at ~46px but shipped at 146px: make a light 2x copy for the header/footer."""
+    src, dst = os.path.join(ROOT, 'assets', 'dpslogo.png'), os.path.join(ROOT, 'assets', 'dpslogo-sm.png')
+    if os.path.exists(src) and not (os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(src)):
+        im = Image.open(src).convert('RGBA')
+        im = im.resize((92, round(im.height * 92 / im.width)), Image.LANCZOS)
+        im.quantize(colors=128, method=Image.FASTOCTREE).save(dst, optimize=True)
+        print('  logo: dpslogo-sm.png', os.path.getsize(dst) // 1024, 'KB')
+
+
+def minify():
+    """Shrink the three site files in place (the readable sources stay in site-src/). Skipped if esbuild is unavailable."""
+    import shutil
+    import subprocess
+    if not shutil.which('npx'):
+        print('  (npx not found, skipping minify)')
+        return
+    for f in ('styles.css', 'script.js', 'content.js'):
+        p = os.path.join(ROOT, f)
+        before = os.path.getsize(p)
+        r = subprocess.run(['npx', '--yes', 'esbuild@0.24.2', p, '--minify', '--allow-overwrite', '--outfile=' + p, '--log-level=error'],
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            print('  ! minify failed for', f, r.stderr[:200])
+            continue
+        print(f'  minified {f}: {before // 1024} KB -> {os.path.getsize(p) // 1024} KB')
 
 
 if __name__ == '__main__':
