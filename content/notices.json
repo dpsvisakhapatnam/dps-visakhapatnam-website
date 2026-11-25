@@ -1,6 +1,10 @@
 {
   "items": [
     {
+      "text": "test",
+      "link": "test"
+    },
+    {
       "text": "Assignments Aug–Sep 2026-27 now available",
       "link": "resources.html#assignments"
     },
