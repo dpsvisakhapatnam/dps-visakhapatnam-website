@@ -115,7 +115,7 @@ def build_index():
     <h1>Service <em>before</em> Self.</h1>
     <p class="lead" data-text="hero_lead">For over three decades we have nurtured the body, mind, heart and soul of every child — so they can excel in academics and leave a legacy.</p>
     <div class="hero-cta">
-      <a class="btn btn-gold" href="admissions.html#process">Admissions</a>
+      <a class="btn btn-gold" href="admissions.html#process" data-adm hidden>Admissions</a>
       <a class="btn btn-ghost" href="contact.html#visit">Plan a campus visit</a>
       <a class="btn btn-ghost" href="#life">See life at DPS</a>
     </div>
@@ -128,7 +128,7 @@ def build_index():
 
 <section class="section tight"><div class="wrap">
   <div class="quick reveal">
-    <a href="admissions.html#process"><b>Admissions</b><span>Process, dates &amp; application form</span></a>
+    <a href="admissions.html#process" data-adm hidden><b>Admissions</b><span>Process, dates &amp; application form</span></a>
     <a href="{FEES}" target="_blank" rel="noopener"><b>Pay School Fees</b><span>Online via SBI Collect</span></a>
     <a href="{ERP}" target="_blank" rel="noopener"><b>ERP Portal</b><span>Parent &amp; student login</span></a>
     <a href="resources.html#assignments"><b>Assignments</b><span>Aug–Sep 2026-27, all classes</span></a>
@@ -235,7 +235,7 @@ def build_index():
   <p style="margin-top:26px"><a class="btn btn-line" href="gallery.html">Explore the full gallery →</a></p>
 </div></section>
 
-<section class="section alt" id="admissions"><div class="wrap">
+<section class="section alt" id="admissions" data-adm hidden><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Admissions</p><h2>Join the DPS family</h2><p>Simple, transparent and personal. Here is how a year of admissions flows.</p></div>
   <div class="steps" data-list="steps" data-src="admissions" data-tpl="step">{steps_html}</div>
   <p style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-green" href="admissions.html">Admission details</a><button class="btn btn-line" data-open="enquiry">Send an enquiry</button><a class="btn btn-line" href="{doc('docs/Std_ApplicationForm.pdf')}">Application form (PDF)</a></p>

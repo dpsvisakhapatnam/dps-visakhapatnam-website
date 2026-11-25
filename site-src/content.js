@@ -28,6 +28,9 @@
   const jobs = [];
   const job = (sel, names, fn) => { if ($(sel)) jobs.push(Promise.all(names.map(need)).then(r => { try { fn(...r); } catch (e) { console.warn('content render', sel, e); } })); };
 
+  /* Admissions on the home page: hidden by default, switched on from the editor ("Show Admissions on the home page") */
+  if (/^index(\.html)?$/.test(document.body.dataset.page || '')) need('page-index').then(d => { if (d && d.show_admissions === true) document.querySelectorAll('[data-adm]').forEach(e => { e.hidden = false; }); });
+
   /* notice ticker (every page) */
   job('.ticker', ['notices'], n => {
     if (!n || !n.items || !n.items.length) return;
