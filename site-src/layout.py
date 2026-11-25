@@ -163,7 +163,7 @@ def footer():
 </footer>
 
 <aside class="dock" aria-label="Quick actions">
-  <button type="button" data-open="enquiry">{ICON['edit']}Enquire</button>
+  <button type="button" data-open="enquiry" data-adm hidden>{ICON['edit']}Enquire</button>
   <a href="{ERP}" target="_blank" rel="noopener">{ICON['login']}Parent<br>Login</a>
   <a href="{FEES}" target="_blank" rel="noopener">{ICON['rupee']}Pay<br>Fees</a>
   <a href="tel:{PHONE_TEL}" class="gold">{ICON['phone']}Call</a>

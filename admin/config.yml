@@ -438,7 +438,7 @@ collections:
         file: content/page-index.json
         format: json
         fields:
-          - { label: "Show Admissions promotions (home page and page bottoms)", name: show_admissions, widget: boolean, default: false, hint: "Switch ON when admissions open (shows the Admissions button, the Admissions card, the “Join the DPS family” section and the “How admissions work” button at the bottom of pages). Switch OFF to hide them again." }
+          - { label: "Show Admissions promotions (home page and page bottoms)", name: show_admissions, widget: boolean, default: false, hint: "Switch ON when admissions open (shows the Admissions button, the Admissions card, the “Join the DPS family” section and the “How admissions work” button at the bottom of pages, and the “Enquire” button on the right side). Switch OFF to hide them again." }
           - { label: "Line above the main heading", name: hero_eyebrow, widget: string }
           - { label: "Welcome sentence under the heading", name: hero_lead, widget: text }
           - label: "Highlight numbers (green strip)"
