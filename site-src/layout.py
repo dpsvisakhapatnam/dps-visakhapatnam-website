@@ -163,28 +163,12 @@ def footer():
 </footer>
 
 <aside class="dock" aria-label="Quick actions">
-  <button type="button" data-open="enquiry" data-adm hidden>{ICON['edit']}Enquire</button>
   <a href="{ERP}" target="_blank" rel="noopener">{ICON['login']}Parent<br>Login</a>
   <a href="{FEES}" target="_blank" rel="noopener">{ICON['rupee']}Pay<br>Fees</a>
   <a href="tel:{PHONE_TEL}" class="gold">{ICON['phone']}Call</a>
 </aside>
 <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
-<div class="modal" id="enquiry" role="dialog" aria-modal="true" aria-labelledby="enqT" hidden>
-  <div class="box">
-    <button class="x" data-close aria-label="Close">×</button>
-    <h2 id="enqT">Admission enquiry</h2>
-    <p class="note">Tell us a little and the school office will get back to you. This opens your email app addressed to the school.</p>
-    <form class="form" data-mailto="{EMAIL}" data-subject="Admission enquiry">
-      <div class="row"><label>Student’s name<input name="Student" required></label>
-      <label>Seeking admission to<select name="Class" required><option value="">Select class</option><option>Balvatika II</option><option>Balvatika III</option><option>Class I</option><option>Class II</option><option>Class III</option><option>Class IV</option><option>Class V</option><option>Class VI</option><option>Class VII</option><option>Class VIII</option><option>Class IX</option><option>Class XI</option></select></label></div>
-      <div class="row"><label>Parent’s name<input name="Parent" required autocomplete="name"></label>
-      <label>Mobile number<input name="Mobile" type="tel" required autocomplete="tel"></label></div>
-      <label>Your query<textarea name="Query" rows="3"></textarea></label>
-      <button class="btn btn-green" type="submit">Send enquiry</button>
-    </form>
-  </div>
-</div>
 <div class="modal" id="search" role="dialog" aria-modal="true" aria-label="Search" hidden>
   <div class="box search-box">
     <input id="q" type="search" placeholder="Search pages, documents, people…" autocomplete="off" aria-label="Search the site">

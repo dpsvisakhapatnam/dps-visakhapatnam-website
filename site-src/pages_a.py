@@ -240,7 +240,7 @@ def build_admissions():
 <section class="section" id="process"><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Admission process</p><h2>From registration to the first day</h2></div>
   <div class="steps" data-list="steps" data-tpl="step">{sh}</div>
-  <div class="callout reveal" style="margin-top:28px"><b>Written test:</b> English, Hindi and Mathematics. For Nursery, a meeting with the concerned teachers and the Principal along with parents. <button class="btn btn-gold btn-sm" data-open="enquiry" data-adm hidden style="margin-left:10px">Send an enquiry</button></div>
+  <div class="callout reveal" style="margin-top:28px"><b>Written test:</b> English, Hindi and Mathematics. For Nursery, a meeting with the concerned teachers and the Principal along with parents.</div>
 </div></section>
 
 <section class="section alt" id="fees"><div class="wrap">
@@ -274,8 +274,7 @@ def build_admissions():
 </div></section>
 
 <section class="section alt" id="faq"><div class="wrap split top">
-  <div class="reveal"><p class="eyebrow dark">Quick answers</p><h2>Frequently asked questions</h2><p>Answers are drawn from the school’s published admission, uniform, promotion and withdrawal policies.</p>
-    <p><button class="btn btn-green" data-open="enquiry" data-adm hidden>Still have a question?</button></p></div>
+  <div class="reveal"><p class="eyebrow dark">Quick answers</p><h2>Frequently asked questions</h2><p>Answers are drawn from the school’s published admission, uniform, promotion and withdrawal policies.</p></div>
   <div class="acc" data-list="faq" data-tpl="faq">{faq}</div>
 </div></section>'''
     return page('admissions.html', 'Admissions', 'Admission process, fee structure 2026-27, school uniform, application forms, withdrawal policy and FAQs for DPS Visakhapatnam.', 'Admissions', body)

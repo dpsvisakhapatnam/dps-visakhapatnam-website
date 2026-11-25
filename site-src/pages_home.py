@@ -238,7 +238,7 @@ def build_index():
 <section class="section alt" id="admissions" data-adm hidden><div class="wrap">
   <div class="section-head reveal"><p class="eyebrow dark">Admissions</p><h2>Join the DPS family</h2><p>Simple, transparent and personal. Here is how a year of admissions flows.</p></div>
   <div class="steps" data-list="steps" data-src="admissions" data-tpl="step">{steps_html}</div>
-  <p style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-green" href="admissions.html">Admission details</a><button class="btn btn-line" data-open="enquiry">Send an enquiry</button><a class="btn btn-line" href="{doc('docs/Std_ApplicationForm.pdf')}">Application form (PDF)</a></p>
+  <p style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-green" href="admissions.html">Admission details</a><a class="btn btn-line" href="{doc('docs/Std_ApplicationForm.pdf')}">Application form (PDF)</a></p>
 </div></section>
 
 <section class="section"><div class="wrap">
